@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MEGA PACK IA 2025</title>
+<meta name="description" content="200+ AI prompts + 12 business models. Earn money with ChatGPT from anywhere. Instant access worldwide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#E8A020;--gold-l:#F5C842;--gold-d:#B87A0A;
+  --black:#070707;--card:#131313;--border:#1C1C1C;
+  --text:#BDB5A5;--muted:#575048;--white:#F6F3EE;
+  --green:#3DBA72;--blue:#5BA4F5;--red:#F26C6C;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit',sans-serif;background:var(--black);color:var(--text);line-height:1.65;overflow-x:hidden;}
+a{color:inherit;text-decoration:none;}
+
+/* TOPBAR */
+.topbar{background:linear-gradient(90deg,var(--gold-d),var(--gold),var(--gold-d));padding:11px 20px;text-align:center;font-weight:700;font-size:13.5px;color:#000;}
+.topbar span{margin:0 14px;opacity:.4;}
+
+/* NAV */
+nav{padding:15px 36px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(7,7,7,.96);backdrop-filter:blur(14px);z-index:200;}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:19px;color:var(--gold);}
+.nav-right{display:flex;align-items:center;gap:16px;}
+.nav-link{font-size:13px;color:var(--muted);transition:color .2s;cursor:pointer;}
+.nav-link:hover{color:var(--white);}
+.nav-cta{background:var(--gold);color:#000;font-weight:700;font-size:13px;padding:9px 20px;border-radius:100px;transition:all .2s;cursor:pointer;border:none;}
+.nav-cta:hover{background:var(--gold-l);transform:translateY(-1px);}
+
+/* LANG SELECTOR */
+.lang-selector{position:relative;}
+.lang-trigger{display:flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--border);border-radius:100px;padding:6px 13px;cursor:pointer;font-size:13px;font-weight:600;color:var(--text);transition:border-color .2s;white-space:nowrap;}
+.lang-trigger:hover{border-color:var(--gold);color:var(--white);}
+.lang-trigger .arrow{font-size:10px;opacity:.5;transition:transform .2s;}
+.lang-selector.open .arrow{transform:rotate(180deg);}
+.lang-dropdown{display:none;position:absolute;top:calc(100% + 8px);right:0;background:#1a1a1a;border:1px solid var(--border);border-radius:12px;padding:6px;min-width:160px;box-shadow:0 16px 40px rgba(0,0,0,.6);z-index:300;}
+.lang-selector.open .lang-dropdown{display:block;}
+.lang-option{display:flex;align-items:center;gap:9px;padding:9px 12px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:500;color:var(--text);transition:background .15s;}
+.lang-option:hover{background:rgba(255,255,255,.06);color:var(--white);}
+.lang-option.selected{color:var(--gold);font-weight:700;}
+
+@media(max-width:640px){.nav-link{display:none;}nav{padding:13px 16px;}}
+
+/* LOADING OVERLAY */
+#lang-loading{position:fixed;inset:0;background:var(--black);z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;transition:opacity .4s;}
+#lang-loading.hidden{opacity:0;pointer-events:none;}
+.loading-logo{font-family:'Syne',sans-serif;font-size:24px;font-weight:800;color:var(--gold);}
+.loading-bar{width:200px;height:3px;background:var(--border);border-radius:100px;overflow:hidden;}
+.loading-fill{height:100%;background:linear-gradient(90deg,var(--gold-l),var(--gold-d));border-radius:100px;animation:loadFill .8s ease forwards;}
+@keyframes loadFill{from{width:0}to{width:100%}}
+
+/* HERO */
+.hero{max-width:960px;margin:0 auto;padding:96px 24px 72px;text-align:center;position:relative;}
+.hero-glow{position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:800px;height:600px;pointer-events:none;background:radial-gradient(ellipse,rgba(232,160,32,.09) 0%,transparent 65%);}
+.hero-world-pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(91,164,245,.25);background:rgba(91,164,245,.05);color:var(--blue);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:10px;}
+.hero-pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(232,160,32,.25);background:rgba(232,160,32,.06);color:var(--gold);font-size:11.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;padding:7px 16px;border-radius:100px;margin-bottom:28px;}
+h1{font-family:'Syne',sans-serif;font-size:clamp(40px,7.5vw,86px);font-weight:800;line-height:1.02;color:var(--white);letter-spacing:-2.5px;margin-bottom:22px;}
+h1 em{font-style:normal;background:linear-gradient(135deg,var(--gold-l),var(--gold-d));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-sub{font-size:clamp(16px,2.2vw,20px);color:var(--muted);max-width:640px;margin:0 auto 44px;line-height:1.7;}
+
+/* FLAGS */
+.flags-strip{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;margin-bottom:44px;}
+.flags-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-right:4px;}
+.flag-chip{background:var(--card);border:1px solid var(--border);border-radius:100px;padding:4px 11px;font-size:13px;display:flex;align-items:center;gap:5px;color:var(--text);}
+.flag-chip small{font-size:11px;}
+
+/* BUTTONS */
+.cta-group{display:flex;flex-direction:column;align-items:center;gap:14px;margin-bottom:64px;}
+.btn-primary{background:linear-gradient(135deg,var(--gold-l),var(--gold-d));color:#000;font-family:'Syne',sans-serif;font-weight:700;font-size:17px;padding:19px 48px;border-radius:100px;display:inline-flex;align-items:center;gap:10px;border:none;cursor:pointer;transition:all .3s;box-shadow:0 8px 40px rgba(232,160,32,.28);animation:pulseGold 2.8s ease-in-out infinite;}
+@keyframes pulseGold{0%,100%{box-shadow:0 8px 40px rgba(232,160,32,.28);}50%{box-shadow:0 14px 60px rgba(232,160,32,.5);}}
+.btn-primary:hover{transform:translateY(-3px) scale(1.02);}
+.secure-row{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;}
+.secure-item{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:5px;}
+
+/* STATS */
+.hero-stats{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;padding-top:52px;border-top:1px solid var(--border);}
+.hstat{text-align:center;}
+.hstat-n{font-family:'Syne',sans-serif;font-size:40px;font-weight:800;color:var(--gold);display:block;}
+.hstat-l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;}
+
+/* SECTIONS */
+.section{max-width:960px;margin:0 auto;padding:80px 24px;border-top:1px solid var(--border);}
+.label{font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:12px;}
+h2{font-family:'Syne',sans-serif;font-size:clamp(27px,4vw,46px);font-weight:800;color:var(--white);line-height:1.08;letter-spacing:-1.2px;margin-bottom:22px;}
+h3{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;color:var(--gold);margin:34px 0 12px;}
+p{font-size:15.5px;color:var(--text);margin-bottom:13px;}
+
+/* PROBLEM */
+.prob-list{list-style:none;margin:28px 0;}
+.prob-list li{font-size:16px;padding:13px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:13px;color:var(--text);}
+.x{color:var(--red);font-size:17px;flex-shrink:0;margin-top:1px;}
+.stat-highlight{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:26px;margin-top:26px;}
+.stat-highlight p{font-size:18px;color:var(--white);font-weight:500;margin:0;}
+
+/* MODULES */
+.modules-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(256px,1fr));gap:13px;margin:36px 0;}
+.mcard{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:26px 22px;transition:border-color .3s,transform .3s;}
+.mcard:hover{border-color:var(--gold);transform:translateY(-3px);}
+.mcard-icon{font-size:30px;margin-bottom:14px;display:block;}
+.mcard-title{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;color:var(--white);margin-bottom:8px;}
+.mcard-desc{font-size:13.5px;color:var(--muted);margin:0;line-height:1.6;}
+.mcard-val{margin-top:14px;font-size:12px;font-weight:700;color:var(--gold);}
+.value-summary{text-align:center;background:rgba(232,160,32,.05);border:1px solid rgba(232,160,32,.2);border-radius:16px;padding:28px;margin-top:10px;}
+.vs-old{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:var(--muted);text-decoration:line-through;margin-bottom:4px;}
+.vs-new{font-family:'Syne',sans-serif;font-size:56px;font-weight:800;color:var(--gold);}
+.vs-label{font-size:13px;color:var(--muted);margin:4px 0 22px;}
+
+/* FOR WHOM */
+.for-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+@media(max-width:560px){.for-grid{grid-template-columns:1fr;}}
+.for-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;}
+.for-card.yes{border-color:rgba(61,186,114,.3);}
+.for-card.no{border-color:rgba(242,108,108,.2);}
+.for-card h3{font-size:16px;margin:0 0 14px;}
+.for-card.yes h3{color:var(--green);}
+.for-card.no h3{color:var(--red);}
+.for-card ul{list-style:none;}
+.for-card ul li{font-size:14px;color:var(--text);padding:6px 0;display:flex;gap:8px;}
+.for-card.yes ul li::before{content:'→';color:var(--green);font-weight:700;}
+.for-card.no ul li::before{content:'→';color:var(--red);font-weight:700;}
+
+/* TESTIMONIALS */
+.t-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:13px;margin:36px 0;}
+.tcard{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:26px 22px;transition:border-color .3s;}
+.tcard:hover{border-color:rgba(232,160,32,.4);}
+.stars{color:var(--gold);font-size:15px;margin-bottom:12px;letter-spacing:2px;}
+.tcard blockquote{font-size:14px;color:var(--text);font-style:italic;margin-bottom:18px;line-height:1.72;border:none;padding:0;}
+.tauthor{display:flex;align-items:center;gap:11px;}
+.tavatar{width:40px;height:40px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,var(--gold),var(--gold-d));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;color:#000;}
+.tname{font-weight:600;font-size:14px;color:var(--white);}
+.tloc{font-size:12px;color:var(--muted);}
+
+/* PRICING */
+.pricing-wrap{max-width:620px;margin:0 auto;}
+.price-box{background:linear-gradient(160deg,#0f0f0f,#121008);border:1px solid var(--gold);border-radius:24px;padding:48px 36px;text-align:center;position:relative;overflow:hidden;}
+.price-box::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-l),var(--gold-d),var(--gold-l));}
+.price-badge{background:var(--gold);color:#000;font-weight:700;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:100px;display:inline-block;margin-bottom:22px;}
+.price-old{font-size:20px;color:var(--muted);text-decoration:line-through;margin-bottom:2px;}
+.price-new{font-family:'Syne',sans-serif;font-size:80px;font-weight:800;color:var(--gold);line-height:1;}
+.price-cur{font-size:30px;vertical-align:super;}
+.price-sub{font-size:12px;color:var(--muted);margin:8px 0 28px;}
+.incl-list{list-style:none;text-align:left;margin:0 0 28px;border-top:1px solid var(--border);padding-top:24px;}
+.incl-list li{padding:9px 0;font-size:14.5px;color:var(--text);display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border);}
+.incl-list li .ck{color:var(--green);font-size:15px;flex-shrink:0;}
+.guarantee{background:rgba(61,186,114,.05);border:1px solid rgba(61,186,114,.2);border-radius:12px;padding:18px;margin:22px 0;display:flex;align-items:center;gap:13px;text-align:left;}
+.guarantee-ico{font-size:30px;flex-shrink:0;}
+.guarantee-txt{font-size:13px;color:var(--text);}
+.guarantee-txt strong{color:var(--green);}
+
+/* HOTMART MODULE */
+.hotmart-module{background:linear-gradient(160deg,#0a0d06,#0d1008);border:1.5px solid rgba(61,186,114,.35);border-radius:20px;padding:32px 28px;margin-top:28px;}
+.hm-header{display:flex;align-items:center;gap:14px;margin-bottom:22px;}
+.hm-icon{font-size:36px;}
+.hm-title{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--white);}
+.hm-sub{font-size:13px;color:var(--muted);}
+.hm-cards{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:22px;}
+.hm-cards-label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-right:4px;}
+.card-badge{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:6px;padding:5px 10px;font-size:12px;font-weight:700;}
+.card-badge.visa{color:#1a5fc8;}.card-badge.mc{color:#e8490d;}.card-badge.amex{color:#007bc1;}
+.hm-form{display:grid;gap:13px;}
+.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:13px;}
+@media(max-width:500px){.form-row-2{grid-template-columns:1fr;}}
+.fg label{display:block;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:7px;}
+.fg input,.fg select{width:100%;background:#0a0a0a;border:1px solid var(--border);border-radius:10px;padding:13px 15px;color:var(--white);font-size:15px;font-family:'Outfit',sans-serif;outline:none;transition:border-color .2s;-webkit-appearance:none;}
+.fg input::placeholder{color:var(--muted);}
+.fg input:focus,.fg select:focus{border-color:var(--gold);}
+.fg select option{background:#111;}
+.hm-btn{width:100%;background:linear-gradient(135deg,var(--gold-l),var(--gold-d));color:#000;font-family:'Syne',sans-serif;font-weight:700;font-size:17px;padding:17px;border-radius:100px;border:none;cursor:pointer;transition:all .25s;margin-top:6px;display:flex;align-items:center;justify-content:center;gap:10px;}
+.hm-btn:hover{transform:translateY(-2px);box-shadow:0 8px 36px rgba(232,160,32,.4);}
+.hm-btn:disabled{opacity:.5;cursor:not-allowed;transform:none;}
+.hm-btn .spinner{width:18px;height:18px;border:2px solid rgba(0,0,0,.3);border-top-color:#000;border-radius:50%;animation:spin .7s linear infinite;display:none;}
+@keyframes spin{to{transform:rotate(360deg)}}
+.pay-security{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:12px;}
+.pay-sec-item{font-size:11.5px;color:var(--muted);display:flex;align-items:center;gap:4px;}
+.order-confirm{display:none;text-align:center;padding:10px 0;}
+@keyframes pop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+.hotmart-notice{background:rgba(91,164,245,.05);border:1px solid rgba(91,164,245,.2);border-radius:12px;padding:16px 18px;margin-top:14px;display:flex;gap:10px;align-items:flex-start;}
+.hotmart-notice p{font-size:13px;color:var(--text);margin:0;}
+
+/* FAQ */
+.faq-list{margin:26px 0;}
+.faq-item{border-bottom:1px solid var(--border);cursor:pointer;}
+.faq-q{padding:20px 0;display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:15px;color:var(--white);gap:12px;}
+.faq-arrow{color:var(--gold);font-size:20px;transition:transform .3s;flex-shrink:0;}
+.faq-item.open .faq-arrow{transform:rotate(90deg);}
+.faq-a{display:none;padding:0 0 18px;font-size:14px;color:var(--muted);line-height:1.75;}
+.faq-item.open .faq-a{display:block;}
+
+/* FINAL + FOOTER */
+.final-section{text-align:center;max-width:960px;margin:0 auto;padding:80px 24px;border-top:1px solid var(--border);}
+footer{border-top:1px solid var(--border);padding:36px 20px;text-align:center;font-size:13px;color:var(--muted);max-width:960px;margin:0 auto;}
+footer a{color:var(--muted);}footer a:hover{color:var(--gold);}
+
+/* FLOAT */
+.float-btn{position:fixed;bottom:22px;right:22px;background:linear-gradient(135deg,var(--gold-l),var(--gold-d));color:#000;font-family:'Syne',sans-serif;font-weight:700;font-size:13.5px;padding:13px 22px;border-radius:100px;border:none;cursor:pointer;box-shadow:0 8px 36px rgba(232,160,32,.38);z-index:50;display:none;animation:pulseGold 2.8s ease-in-out infinite;}
+.float-btn:hover{transform:scale(1.05);}
+
+/* ACCESS PAGE */
+#access-page{display:none;min-height:100vh;background:var(--black);}
+.access-hero{text-align:center;padding:80px 24px 40px;max-width:720px;margin:0 auto;}
+.access-steps{max-width:720px;margin:0 auto 60px;padding:0 24px;display:grid;gap:13px;}
+.access-step{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:26px;display:flex;align-items:flex-start;gap:17px;}
+.step-num{background:var(--gold);color:#000;font-family:'Syne',sans-serif;font-weight:800;font-size:16px;min-width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.step-cnt h3{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--white);margin:0 0 7px;color:var(--gold);}
+.step-cnt p{font-size:14px;margin:0;color:var(--text);}
+.dl-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--gold-l),var(--gold-d));color:#000;font-family:'Syne',sans-serif;font-weight:700;font-size:15px;padding:13px 28px;border-radius:100px;margin-top:13px;transition:all .2s;}
+.dl-btn:hover{transform:translateY(-2px);}
+
+@media(max-width:600px){.hero-stats{gap:28px;}.price-new{font-size:58px;}.price-box,.hotmart-module{padding:28px 16px;}}
+</style>
+</head>
+<body>
+
+<!-- LOADING SCREEN -->
+<div id="lang-loading">
+  <div class="loading-logo">⚡ MEGA PACK IA</div>
+  <div class="loading-bar"><div class="loading-fill"></div></div>
+</div>
+
+<!-- ══════════ LANDING PAGE ══════════ -->
+<div id="landing-page" style="opacity:0;transition:opacity .4s;">
+
+<!-- TOPBAR -->
+<div class="topbar" id="tb"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">⚡ MEGA PACK IA</div>
+  <div class="nav-right">
+    <span class="nav-link" onclick="irA('problema')" data-t="nav_problem"></span>
+    <span class="nav-link" onclick="irA('resenas')" data-t="nav_reviews"></span>
+    <span class="nav-link" onclick="window.open('https://pay.hotmart.com/Y104620749I?off=92xnvs4h','_blank')" data-t="nav_price"></span>
+
+    <!-- LANGUAGE SELECTOR -->
+    <div class="lang-selector" id="langSelector">
+      <div class="lang-trigger" onclick="toggleLangMenu()">
+        <span id="currentLangFlag">🌍</span>
+        <span id="currentLangName">...</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="lang-dropdown" id="langDropdown">
+        <div class="lang-option" onclick="setLang('es')">🇪🇸 Español</div>
+        <div class="lang-option" onclick="setLang('en')">🇺🇸 English</div>
+        <div class="lang-option" onclick="setLang('fr')">🇫🇷 Français</div>
+        <div class="lang-option" onclick="setLang('pt')">🇧🇷 Português</div>
+        <div class="lang-option" onclick="setLang('de')">🇩🇪 Deutsch</div>
+        <div class="lang-option" onclick="setLang('it')">🇮🇹 Italiano</div>
+      </div>
+    </div>
+
+    <button class="nav-cta" onclick="window.open('https://pay.hotmart.com/Y104620749I?off=92xnvs4h','_blank')" data-t="nav_cta"></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-world-pill" data-t="hero_world_pill"></div>
+  <div class="hero-pill" data-t="hero_pill"></div>
+  <h1 data-t="h1"></h1>
+  <p class="hero-sub" data-t="hero_sub"></p>
+
+  <div class="flags-strip">
+    <span class="flags-label" data-t="flags_label"></span>
+    <span class="flag-chip">🇺🇸 <small>USA</small></span>
+    <span class="flag-chip">🇬🇧 <small>UK</small></span>
+    <span class="flag-chip">🇪🇸 <small>España</small></span>
+    <span class="flag-chip">🇲🇽 <small>México</small></span>
+    <span class="flag-chip">🇨🇴 <small>Colombia</small></span>
+    <span class="flag-chip">🇧🇷 <small>Brasil</small></span>
+    <span class="flag-chip">🇫🇷 <small>France</small></span>
+    <span class="flag-chip">🇩🇪 <small>Deutschland</small></span>
+    <span class="flag-chip">🇩🇴 <small>Rep. Dom.</small></span>
+    <span class="flag-chip">🌍 <small data-t="flags_more"></small></span>
+  </div>
+
+  <div class="cta-group">
+    <button class="btn-primary" onclick="window.open('https://pay.hotmart.com/Y104620749I?off=92xnvs4h','_blank')" data-t="hero_cta"></button>
+    <div class="secure-row">
+      <span class="secure-item">🔒 <span data-t="sec1"></span></span>
+      <span class="secure-item">⚡ <span data-t="sec2"></span></span>
+      <span class="secure-item">💳 Visa · Mastercard · Amex</span>
+      <span class="secure-item">🛡️ <span data-t="sec3"></span></span>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="hstat"><span class="hstat-n">200+</span><span class="hstat-l" data-t="stat1"></span></div>
+    <div class="hstat"><span class="hstat-n">12</span><span class="hstat-l" data-t="stat2"></span></div>
+    <div class="hstat"><span class="hstat-n">47</span><span class="hstat-l" data-t="stat3"></span></div>
+    <div class="hstat"><span class="hstat-n">∞</span><span class="hstat-l" data-t="stat4"></span></div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<div class="section" id="problema">
+  <span class="label" data-t="prob_label"></span>
+  <h2 data-t="prob_h2"></h2>
+  <ul class="prob-list">
+    <li><span class="x">✗</span><span data-t="prob1"></span></li>
+    <li><span class="x">✗</span><span data-t="prob2"></span></li>
+    <li><span class="x">✗</span><span data-t="prob3"></span></li>
+    <li><span class="x">✗</span><span data-t="prob4"></span></li>
+    <li><span class="x">✗</span><span data-t="prob5"></span></li>
+  </ul>
+  <div class="stat-highlight"><p data-t="prob_highlight"></p></div>
+</div>
+
+<!-- WHAT'S INSIDE -->
+<div class="section" id="que-incluye">
+  <span class="label" data-t="inc_label"></span>
+  <h2 data-t="inc_h2"></h2>
+  <p data-t="inc_sub"></p>
+  <div class="modules-grid">
+    <div class="mcard"><span class="mcard-icon">🎯</span><div class="mcard-title" data-t="m1_title"></div><p class="mcard-desc" data-t="m1_desc"></p><div class="mcard-val" data-t="m1_val"></div></div>
+    <div class="mcard"><span class="mcard-icon">💼</span><div class="mcard-title" data-t="m2_title"></div><p class="mcard-desc" data-t="m2_desc"></p><div class="mcard-val" data-t="m2_val"></div></div>
+    <div class="mcard"><span class="mcard-icon">📋</span><div class="mcard-title" data-t="m3_title"></div><p class="mcard-desc" data-t="m3_desc"></p><div class="mcard-val" data-t="m3_val"></div></div>
+    <div class="mcard"><span class="mcard-icon">🚀</span><div class="mcard-title" data-t="m4_title"></div><p class="mcard-desc" data-t="m4_desc"></p><div class="mcard-val" data-t="m4_val"></div></div>
+    <div class="mcard"><span class="mcard-icon">💰</span><div class="mcard-title" data-t="m5_title"></div><p class="mcard-desc" data-t="m5_desc"></p><div class="mcard-val" data-t="m5_val"></div></div>
+    <div class="mcard"><span class="mcard-icon">🌍</span><div class="mcard-title" data-t="m6_title"></div><p class="mcard-desc" data-t="m6_desc"></p><div class="mcard-val" data-t="m6_val"></div></div>
+  </div>
+  <div class="value-summary">
+    <p style="font-size:13px;color:var(--muted);margin-bottom:4px;" data-t="vs_label"></p>
+    <div class="vs-old">$225 USD</div>
+    <div class="vs-new">$17 <span style="font-size:26px;">USD</span></div>
+    <div class="vs-label" data-t="vs_sub"></div>
+    <button class="btn-primary" onclick="window.open('https://pay.hotmart.com/Y104620749I?off=92xnvs4h','_blank')" style="font-size:16px;padding:16px 36px;" data-t="vs_cta"></button>
+  </div>
+</div>
+
+<!-- FOR WHOM -->
+<div class="section">
+  <span class="label" data-t="fw_label"></span>
+  <h2 data-t="fw_h2"></h2>
+  <div class="for-grid">
+    <div class="for-card yes">
+      <h3 data-t="fw_yes_title"></h3>
+      <ul>
+        <li data-t="fw_yes1"></li><li data-t="fw_yes2"></li><li data-t="fw_yes3"></li>
+        <li data-t="fw_yes4"></li><li data-t="fw_yes5"></li><li data-t="fw_yes6"></li>
+      </ul>
+    </div>
+    <div class="for-card no">
+      <h3 data-t="fw_no_title"></h3>
+      <ul>
+        <li data-t="fw_no1"></li><li data-t="fw_no2"></li>
+        <li data-t="fw_no3"></li><li data-t="fw_no4"></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="section" id="resenas">
+  <span class="label" data-t="rev_label"></span>
+  <h2 data-t="rev_h2"></h2>
+  <div class="t-grid">
+    <div class="tcard"><div class="stars">★★★★★</div><blockquote data-t="t1_q"></blockquote><div class="tauthor"><div class="tavatar">ML</div><div><div class="tname">María L. Reyes</div><div class="tloc">🇩🇴 Santo Domingo, Dominican Republic</div></div></div></div>
+    <div class="tcard"><div class="stars">★★★★★</div><blockquote data-t="t2_q"></blockquote><div class="tauthor"><div class="tavatar">JP</div><div><div class="tname">Jordi P. Mas</div><div class="tloc">🇪🇸 Barcelona, España</div></div></div></div>
+    <div class="tcard"><div class="stars">★★★★★</div><blockquote data-t="t3_q"></blockquote><div class="tauthor"><div class="tavatar">DK</div><div><div class="tname">Daniel K. Osei</div><div class="tloc">🇬🇧 London, United Kingdom</div></div></div></div>
+    <div class="tcard"><div class="stars">★★★★★</div><blockquote data-t="t4_q"></blockquote><div class="tauthor"><div class="tavatar">VR</div><div><div class="tname">Valentina R. Ochoa</div><div class="tloc">🇨🇴 Bogotá, Colombia</div></div></div></div>
+    <div class="tcard"><div class="stars">★★★★★</div><blockquote data-t="t5_q"></blockquote><div class="tauthor"><div class="tavatar">SF</div><div><div class="tname">Sophie F. Dubois</div><div class="tloc">🇫🇷 Paris, France</div></div></div></div>
+    <div class="tcard"><div class="stars">★★★★★</div><blockquote data-t="t6_q"></blockquote><div class="tauthor"><div class="tavatar">MK</div><div><div class="tname">Markus K. Weber</div><div class="tloc">🇩🇪 Berlin, Deutschland</div></div></div></div>
+  </div>
+</div>
+
+<!-- PRICING -->
+<div class="section" id="precio">
+  <span class="label" data-t="price_label"></span>
+  <h2 data-t="price_h2"></h2>
+  <div class="pricing-wrap">
+    <div class="price-box">
+      <div class="price-badge" data-t="price_badge"></div>
+      <div class="price-old">$225 USD</div>
+      <div class="price-new"><span class="price-cur">$</span>17</div>
+      <div class="price-sub" data-t="price_sub"></div>
+      <ul class="incl-list">
+        <li><span class="ck">✓</span><span data-t="incl1"></span></li>
+        <li><span class="ck">✓</span><span data-t="incl2"></span></li>
+        <li><span class="ck">✓</span><span data-t="incl3"></span></li>
+        <li><span class="ck">✓</span><span data-t="incl4"></span></li>
+        <li><span class="ck">✓</span><span data-t="incl5"></span></li>
+        <li><span class="ck">✓</span><span data-t="incl6"></span></li>
+        <li><span class="ck">✓</span><span data-t="incl7"></span></li>
+      </ul>
+      <div class="guarantee">
+        <div class="guarantee-ico">🛡️</div>
+        <div class="guarantee-txt"><strong data-t="guar_title"></strong> <span data-t="guar_text"></span></div>
+      </div>
+
+      <!-- HOTMART MODULE -->
+      <div class="hotmart-module">
+        <div class="hm-header">
+          <div class="hm-icon">🔥</div>
+          <div>
+            <div class="hm-title" data-t="hm_title"></div>
+            <div class="hm-sub" data-t="hm_sub"></div>
+          </div>
+        </div>
+        <div class="hm-cards">
+          <span class="hm-cards-label" data-t="hm_cards_label"></span>
+          <span class="card-badge visa">💳 VISA</span>
+          <span class="card-badge mc">💳 Mastercard</span>
+          <span class="card-badge amex">💳 Amex</span>
+        </div>
+
+        <div id="purchase-form">
+          <div class="hm-form">
+            <div class="form-row-2">
+              <div class="fg"><label data-t="form_fname"></label><input type="text" id="f-name" data-ph="form_fname_ph"/></div>
+              <div class="fg"><label data-t="form_lname"></label><input type="text" id="f-last" data-ph="form_lname_ph"/></div>
+            </div>
+            <div class="fg"><label data-t="form_email"></label><input type="email" id="f-email" data-ph="form_email_ph"/></div>
+            <div class="fg">
+              <label data-t="form_country"></label>
+              <select id="f-country">
+                <option value="" data-t="form_country_ph"></option>
+                <option>🇺🇸 United States</option><option>🇬🇧 United Kingdom</option>
+                <option>🇪🇸 España</option><option>🇲🇽 México</option>
+                <option>🇨🇴 Colombia</option><option>🇦🇷 Argentina</option>
+                <option>🇧🇷 Brasil</option><option>🇨🇱 Chile</option>
+                <option>🇩🇴 República Dominicana</option><option>🇵🇪 Perú</option>
+                <option>🇻🇪 Venezuela</option><option>🇫🇷 France</option>
+                <option>🇩🇪 Deutschland</option><option>🇮🇹 Italia</option>
+                <option>🇵🇹 Portugal</option><option>🇨🇦 Canada</option>
+                <option>🇦🇺 Australia</option><option data-t="other_country"></option>
+              </select>
+            </div>
+            <div id="form-error" style="display:none;background:rgba(242,108,108,.1);border:1px solid rgba(242,108,108,.3);border-radius:9px;padding:11px 14px;font-size:13px;color:var(--red);"></div>
+            <button class="hm-btn" id="pay-btn" onclick="handleCheckout()">
+              <span id="btn-text" data-t="pay_btn"></span>
+              <span class="spinner" id="btn-spinner"></span>
+            </button>
+          </div>
+          <div class="pay-security">
+            <span class="pay-sec-item">🔒 SSL 256-bit</span>
+            <span class="pay-sec-item">🔥 Hotmart</span>
+            <span class="pay-sec-item">⚡ <span data-t="sec2"></span></span>
+            <span class="pay-sec-item">🌍 190+ <span data-t="countries"></span></span>
+          </div>
+          <div class="hotmart-notice">
+            <span style="font-size:20px;flex-shrink:0;">ℹ️</span>
+            <p data-t="hotmart_notice"></p>
+          </div>
+        </div>
+
+        <div class="order-confirm" id="order-confirm">
+          <div style="font-size:68px;animation:pop .5s cubic-bezier(.175,.885,.32,1.275);">🎉</div>
+          <h2 style="font-size:26px;margin:16px 0 10px;" data-t="order_title"></h2>
+          <p style="color:var(--text);font-size:15px;max-width:380px;margin:0 auto 22px;" data-t="order_msg"></p>
+          <p style="font-size:13px;color:var(--muted);" data-t="order_fallback_pre"> <a href="#" id="manual-link" style="color:var(--gold);text-decoration:underline;" data-t="order_fallback_link"></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="section">
+  <span class="label" data-t="faq_label"></span>
+  <h2 data-t="faq_h2"></h2>
+  <div class="faq-list">
+    <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q"><span data-t="faq1_q"></span><span class="faq-arrow">›</span></div><div class="faq-a" data-t="faq1_a"></div></div>
+    <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q"><span data-t="faq2_q"></span><span class="faq-arrow">›</span></div><div class="faq-a" data-t="faq2_a"></div></div>
+    <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q"><span data-t="faq3_q"></span><span class="faq-arrow">›</span></div><div class="faq-a" data-t="faq3_a"></div></div>
+    <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q"><span data-t="faq4_q"></span><span class="faq-arrow">›</span></div><div class="faq-a" data-t="faq4_a"></div></div>
+    <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q"><span data-t="faq5_q"></span><span class="faq-arrow">›</span></div><div class="faq-a" data-t="faq5_a"></div></div>
+  </div>
+</div>
+
+<!-- FINAL CTA -->
+<div class="final-section">
+  <span class="label" data-t="final_label"></span>
+  <h2 data-t="final_h2"></h2>
+  <p style="font-size:18px;max-width:560px;margin:0 auto 36px;color:var(--muted);" data-t="final_sub"></p>
+  <button class="btn-primary" onclick="window.open('https://pay.hotmart.com/Y104620749I?off=92xnvs4h','_blank')" style="font-size:17px;padding:19px 48px;" data-t="final_cta"></button>
+  <div class="secure-row" style="margin-top:16px;">
+    <span class="secure-item">🔒 <span data-t="sec1"></span></span>
+    <span class="secure-item">⚡ <span data-t="sec2"></span></span>
+    <span class="secure-item">🛡️ <span data-t="sec3"></span></span>
+    <span class="secure-item">💳 <span data-t="sec4"></span></span>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 MEGA PACK IA · <span data-t="footer_rights"></span></p>
+  <p style="margin-top:8px;"><a href="#" data-t="footer_privacy"></a> &nbsp;·&nbsp; <a href="#" data-t="footer_terms"></a> &nbsp;·&nbsp; <a href="https://wa.me/18095551234" target="_blank" data-t="footer_support"></a></p>
+  <p style="margin-top:12px;" data-t="footer_disclaimer"></p>
+</footer>
+
+<button class="float-btn" id="floatBtn" onclick="window.open('https://pay.hotmart.com/Y104620749I?off=92xnvs4h','_blank')" data-t="float_btn"></button>
+
+</div><!-- /landing-page -->
+
+<!-- ACCESS PAGE -->
+<div id="access-page">
+  <nav><div class="logo">⚡ MEGA PACK IA</div><span style="font-size:14px;color:var(--green);font-weight:600;" data-t="access_status"></span></nav>
+  <div class="access-hero">
+    <div style="font-size:68px;margin-bottom:22px;animation:pop .5s cubic-bezier(.175,.885,.32,1.275);">🎊</div>
+    <h2 style="font-size:40px;margin-bottom:14px;" data-t="access_h2"></h2>
+    <p style="font-size:17px;" data-t="access_sub"></p>
+  </div>
+  <div class="access-steps">
+    <div class="access-step"><div class="step-num">1</div><div class="step-cnt"><h3 data-t="as1_title"></h3><p data-t="as1_desc"></p><a href="MEGAPACK-IA-producto.html" download="MEGAPACK_IA_2025.html" class="dl-btn" data-t="as1_btn"></a></div></div>
+    <div class="access-step"><div class="step-num">2</div><div class="step-cnt"><h3 data-t="as2_title"></h3><p data-t="as2_desc"></p></div></div>
+    <div class="access-step"><div class="step-num">3</div><div class="step-cnt"><h3 data-t="as3_title"></h3><p data-t="as3_desc"></p></div></div>
+  </div>
+  <footer><p>© 2025 MEGA PACK IA</p></footer>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════
+//  TRANSLATIONS — 6 LANGUAGES
+// ═══════════════════════════════════════════════════════════
+const T = {
+  es: {
+    tb: "🌍 Disponible en todo el mundo &nbsp;|&nbsp; ⚡ Acceso instantáneo tras el pago &nbsp;|&nbsp; 🛡️ Garantía de 7 días",
+    nav_problem:"El Problema", nav_reviews:"Reseñas", nav_price:"Precio", nav_cta:"Obtener acceso →",
+    hero_world_pill:"🌍 Disponible en todos los países",
+    hero_pill:"🤖 El sistema de IA #1 de 2025",
+    h1:"Genera Ingresos Reales<br><em>con Inteligencia Artificial</em>",
+    hero_sub:"200+ prompts probados + 12 modelos de negocio + plantillas listas. Todo lo que necesitas para ganar dinero con ChatGPT desde cualquier país, sin experiencia previa.",
+    flags_label:"Disponible en:", flags_more:"+185 países más",
+    hero_cta:"🚀 Obtener el Pack — Solo $17 USD",
+    sec1:"Pago seguro", sec2:"Acceso instantáneo", sec3:"Garantía 7 días", sec4:"Todas las tarjetas",
+    stat1:"Prompts Listos", stat2:"Modelos de Negocio", stat3:"Países Alcanzados", stat4:"Acceso de por vida",
+    prob_label:"El Problema Real", prob_h2:"¿Te identificas con esto?",
+    prob1:"Sabes que la IA es el futuro pero no sabes por dónde empezar",
+    prob2:"Has probado ChatGPT pero no sabes cómo ganar dinero con él",
+    prob3:"Ves cómo otros generan ingresos con IA mientras tú sigues buscando",
+    prob4:"No tienes capital para empezar un negocio tradicional",
+    prob5:"Quieres libertad financiera pero no encuentras el camino correcto",
+    prob_highlight:"La realidad es que <strong style='color:var(--gold)'>la IA está creando una brecha enorme</strong> entre quienes saben usarla estratégicamente y quienes no. Con este pack, estarás del lado correcto.",
+    inc_label:"Qué Incluye", inc_h2:"Un sistema completo, no solo prompts",
+    inc_sub:"Cada módulo está diseñado para que puedas tomar acción inmediata, sin herramientas extra ni experiencia previa.",
+    m1_title:"200+ Prompts Organizados", m1_desc:"Prompts por categoría: contenido viral, copywriting, productos digitales, negocios locales y freelancing global. Listos para copiar y pegar.", m1_val:"Valor: $45 USD",
+    m2_title:"12 Modelos de Negocio", m2_desc:"Los 12 negocios con IA más rentables de 2025 con datos de ingresos reales, nivel de dificultad y guía de inicio paso a paso.", m2_val:"Valor: $55 USD",
+    m3_title:"Plantillas Listas", m3_desc:"Propuestas de servicio, contratos, solicitudes de testimonios y scripts de venta. Solo copia, personaliza y envía.", m3_val:"Valor: $30 USD",
+    m4_title:"Sistema de 7 Pasos", m4_desc:"El camino exacto para conseguir tu primer cliente en 7 días o menos, aunque no tengas ninguna experiencia previa.", m4_val:"Valor: $35 USD",
+    m5_title:"Guía de Precios Global", m5_desc:"Cómo cobrar, cuánto cobrar y cómo justificar tus tarifas para que los clientes digan sí en Latinoamérica, USA y Europa.", m5_val:"Valor: $25 USD",
+    m6_title:"Guía de Freelancing Internacional", m6_desc:"Cómo conseguir clientes en USA, UK, España y Canadá que paguen en dólares o euros desde cualquier parte del mundo.", m6_val:"Valor: $35 USD",
+    vs_label:"Valor total de todo lo incluido", vs_sub:"Pago único · Sin suscripciones · Acceso de por vida", vs_cta:"Obtener todo por $17 USD →",
+    fw_label:"¿Es para mí?", fw_h2:"Este pack es perfecto para ti si…",
+    fw_yes_title:"✅ SÍ es para ti si…", fw_no_title:"❌ NO es para ti si…",
+    fw_yes1:"Quieres generar ingresos extra desde casa", fw_yes2:"Eres emprendedor o quieres serlo",
+    fw_yes3:"Ofreces servicios y quieres trabajar más rápido", fw_yes4:"Tienes curiosidad por la IA pero no sabes cómo monetizarla",
+    fw_yes5:"Quieres trabajar menos y ganar más", fw_yes6:"Eres estudiante que quiere crear sus propios ingresos",
+    fw_no1:"Esperas hacerte rico sin trabajar", fw_no2:"No estás dispuesto a invertir tiempo en aprender",
+    fw_no3:"Quieres resultados sin tomar acción", fw_no4:"Ya eres experto avanzado en monetización con IA",
+    rev_label:"Resultados Reales · Reseñas Globales", rev_h2:"Personas de 47 países ya lo están usando",
+    t1_q:"Conseguí mi primer cliente de contenido a los 5 días de comprar. Los prompts son increíblemente detallados y funcionan de verdad. Recuperé 10 veces la inversión la primera semana.",
+    t2_q:"Como diseñador freelance en Barcelona, agregué copywriting a mis servicios usando estos prompts. Ahora cobro el doble por proyecto y los clientes adoran los resultados.",
+    t3_q:"Lo compré desde Londres para un negocio paralelo. En 6 semanas ganaba £400/mes escribiendo contenido de LinkedIn con IA. El ROI es increíble.",
+    t4_q:"La guía de freelancing internacional sola vale 10 veces el precio. Encontré mi primer cliente en USA en 3 semanas y me paga $800/mes por contenido.",
+    t5_q:"Je l'ai acheté pour développer une activité secondaire. En un mois, j'ai trois clients qui me paient pour gérer leurs réseaux sociaux avec l'IA.",
+    t6_q:"Als freiberuflicher Texter habe ich mein Angebot mit diesen Prompts erweitert. Mein Einkommen hat sich in 2 Monaten verdoppelt. Absolut empfehlenswert.",
+    price_label:"Obtén Acceso", price_h2:"Una inversión. Resultados de por vida.",
+    price_badge:"🔥 Precio de Lanzamiento", price_sub:"USD · Pago único · Acceso instantáneo · Sin suscripción",
+    incl1:"200+ prompts de IA organizados por categoría", incl2:"12 modelos de negocio probados con datos de ingresos",
+    incl3:"Sistema de 7 pasos para tu primer cliente", incl4:"Propuestas de servicio, contratos y plantillas",
+    incl5:"Guía de freelancing internacional (gana en USD/EUR)", incl6:"Actualizaciones gratuitas de por vida", incl7:"Entrega inmediata a tu email",
+    guar_title:"Garantía de 7 días.", guar_text:"Si en 7 días sientes que el pack no fue lo que esperabas, te reembolsamos el 100%. Sin preguntas, sin complicaciones.",
+    hm_title:"Pago Seguro vía Hotmart", hm_sub:"Impulsado por Hotmart · SSL 256-bit · Procesamiento global",
+    hm_cards_label:"Aceptamos:",
+    form_fname:"Nombre", form_fname_ph:"Juan", form_lname:"Apellido", form_lname_ph:"García",
+    form_email:"Email — Recibirás el pack aquí", form_email_ph:"tu@email.com",
+    form_country:"País", form_country_ph:"Selecciona tu país…", other_country:"Otro",
+    pay_btn:"🔒 Completar Compra — $17 USD",
+    hotmart_notice:"Serás redirigido al checkout seguro de <strong>Hotmart</strong> para completar tu pago. Hotmart procesa pagos en 190+ países y acepta todas las tarjetas principales. Tras el pago, tu pack llega instantáneamente a tu email.",
+    countries:"países",
+    order_title:"Redirigiendo al Checkout…", order_msg:"Estás siendo llevado al checkout seguro de Hotmart. Completa tu pago allí y tu pack llega a tu email al instante.",
+    order_fallback_pre:"Si la redirección no abrió,", order_fallback_link:"haz clic aquí",
+    faq_label:"Preguntas y Respuestas", faq_h2:"Todo lo que necesitas saber",
+    faq1_q:"¿Necesito experiencia previa?", faq1_a:"No. El pack está diseñado para principiantes totales. Los prompts son listos para copiar y pegar, y cada guía explica cada paso de forma simple y directa.",
+    faq2_q:"¿Necesito ChatGPT de pago?", faq2_a:"La versión gratuita de ChatGPT es suficiente para empezar. ChatGPT Plus ($20/mes) es más potente, pero no es requisito para comenzar y generar resultados.",
+    faq3_q:"¿Cuándo recibo el pack?", faq3_a:"El acceso es instantáneo. Hotmart envía automáticamente el enlace de descarga a tu email en el momento en que se confirma tu pago.",
+    faq4_q:"¿Qué métodos de pago aceptan?", faq4_a:"Se aceptan todas las tarjetas de crédito y débito principales: Visa, Mastercard, American Express y Discover. Hotmart procesa pagos de más de 190 países de forma segura.",
+    faq5_q:"¿Cómo funciona la garantía de 7 días?", faq5_a:"Si en 7 días sientes que el pack no cumplió tus expectativas, contáctanos con tu comprobante de compra y te reembolsamos el 100%. Sin preguntas ni complicaciones.",
+    final_label:"Última Oportunidad", final_h2:"¿Seguirás mirando cómo otros lo logran?",
+    final_sub:"La IA no espera. Cada día sin usarla estratégicamente, alguien más está tomando los clientes y oportunidades que podrían ser tuyas.",
+    final_cta:"🚀 Sí, Quiero el MEGA PACK IA — $17 USD",
+    float_btn:"⚡ Acceso — $17 USD",
+    footer_rights:"Todos los derechos reservados", footer_privacy:"Política de Privacidad", footer_terms:"Términos de Uso", footer_support:"Soporte (WhatsApp)", footer_disclaimer:"⚠️ Los ingresos mostrados son ejemplos de lo posible, no garantías. Los resultados individuales varían.",
+    access_status:"✅ Compra Completada", access_h2:"¡Bienvenido al Pack!", access_sub:"Tu acceso está listo. Sigue los pasos a continuación para descargar todo y empezar a generar ingresos con IA.",
+    as1_title:"📥 Descarga el MEGA PACK IA", as1_desc:"Haz clic en el botón para descargar el pack completo. Ábrelo en cualquier navegador. Guarda una copia en Google Drive para acceso permanente.", as1_btn:"⬇️ Descargar MEGA PACK IA",
+    as2_title:"🤖 Abre ChatGPT", as2_desc:"Ve a chat.openai.com y crea una cuenta gratuita si no tienes una. La versión gratuita funciona perfectamente para empezar.",
+    as3_title:"🚀 Empieza con el Capítulo 1", as3_desc:"Lee los 12 Modelos de Negocio del Capítulo 1 y elige UNO. No intentes hacer todo a la vez. Enfócate, actúa y ve los resultados.",
+    flag:"🇪🇸", langName:"Español"
+  },
+
+  en: {
+    tb: "🌍 Available Worldwide &nbsp;|&nbsp; ⚡ Instant Access After Payment &nbsp;|&nbsp; 🛡️ 7-Day Money-Back Guarantee",
+    nav_problem:"Problem", nav_reviews:"Reviews", nav_price:"Pricing", nav_cta:"Get Access →",
+    hero_world_pill:"🌍 Available in Every Country",
+    hero_pill:"🤖 The #1 AI Income System of 2025",
+    h1:"Start Earning Real Money<br><em>with Artificial Intelligence</em>",
+    hero_sub:"200+ proven prompts + 12 business models + ready templates. Everything you need to generate income with ChatGPT from any country — no experience required.",
+    flags_label:"Available in:", flags_more:"+185 more countries",
+    hero_cta:"🚀 Get the Full Pack — Only $17 USD",
+    sec1:"Secure payment", sec2:"Instant access", sec3:"7-day guarantee", sec4:"All major cards",
+    stat1:"Ready Prompts", stat2:"Business Models", stat3:"Countries Reached", stat4:"Lifetime Access",
+    prob_label:"The Real Problem", prob_h2:"Does any of this sound like you?",
+    prob1:"You know AI is the future but don't know where to start",
+    prob2:"You've tried ChatGPT but can't figure out how to make money with it",
+    prob3:"You see others generating AI income while you keep searching",
+    prob4:"You don't have capital to start a traditional business",
+    prob5:"You want financial freedom but can't find the right path",
+    prob_highlight:"The truth is that <strong style='color:var(--gold)'>AI is creating a massive gap</strong> between those who use it strategically and those who don't. With this pack, you'll be on the right side of that gap.",
+    inc_label:"What's Inside", inc_h2:"A complete system, not just prompts",
+    inc_sub:"Every module is designed for immediate action — no extra tools, no courses, no experience needed.",
+    m1_title:"200+ Organized Prompts", m1_desc:"Prompts by category: viral content, copywriting, digital products, local business, and global freelancing. Ready to copy and paste.", m1_val:"Value: $45 USD",
+    m2_title:"12 Business Models", m2_desc:"The 12 most profitable AI-powered businesses in 2025, with real income data, difficulty rating, and step-by-step start guides.", m2_val:"Value: $55 USD",
+    m3_title:"Ready-to-Use Templates", m3_desc:"Client proposals, contracts, testimonial requests, and sales scripts. Just copy, customize, and send.", m3_val:"Value: $30 USD",
+    m4_title:"7-Step First-Client System", m4_desc:"The exact roadmap to land your first paying client in 7 days or less — even with zero prior experience.", m4_val:"Value: $35 USD",
+    m5_title:"Global Pricing Guide", m5_desc:"How to set, justify, and raise your rates so clients say yes — with pricing benchmarks for Latin America, USA, and Europe.", m5_val:"Value: $25 USD",
+    m6_title:"International Freelancing Guide", m6_desc:"How to get clients in the USA, UK, Spain and Canada paying in dollars or euros from anywhere in the world.", m6_val:"Value: $35 USD",
+    vs_label:"Total value of everything inside", vs_sub:"One-time payment · No subscriptions · Lifetime access", vs_cta:"Get Everything for $17 USD →",
+    fw_label:"Is This For Me?", fw_h2:"This pack is perfect for you if…",
+    fw_yes_title:"✅ YES, it's for you if…", fw_no_title:"❌ NOT for you if…",
+    fw_yes1:"You want to generate extra income from home", fw_yes2:"You're an entrepreneur or want to become one",
+    fw_yes3:"You offer services and want to work faster", fw_yes4:"You're curious about AI but don't know how to monetize it",
+    fw_yes5:"You want to work less and earn more", fw_yes6:"You're a student who wants to create their own income",
+    fw_no1:"You expect to get rich without working", fw_no2:"You're not willing to invest time in learning",
+    fw_no3:"You want results without taking action", fw_no4:"You're already an advanced AI monetization expert",
+    rev_label:"Real Results · Global Reviews", rev_h2:"People from 47 countries are already using this",
+    t1_q:"I landed my first content client 5 days after buying. The prompts are incredibly detailed and actually work. Made back 10x the investment in the first week.",
+    t2_q:"As a freelance designer in Barcelona, I added copywriting using these prompts. I now charge 2x per project and clients love the results.",
+    t3_q:"Bought this from London for a side hustle. Within 6 weeks I was making £400/month writing AI-assisted LinkedIn content. The ROI is insane.",
+    t4_q:"The international freelancing guide alone is worth 10x the price. I found my first US client in 3 weeks and they pay me $800/month for content.",
+    t5_q:"I bought it to develop a side business. Within a month I had three clients paying me to manage their social media with AI.",
+    t6_q:"As a freelance copywriter I expanded my offering with these prompts. My income doubled in 2 months. Absolutely recommended.",
+    price_label:"Get Access Now", price_h2:"One investment. Lifetime results.",
+    price_badge:"🔥 Launch Price — Limited Time", price_sub:"USD · One-time · Instant access · No subscription",
+    incl1:"200+ AI prompts organized by category", incl2:"12 proven business models with income data",
+    incl3:"7-Step system to land your first client", incl4:"Client proposals, contracts & templates",
+    incl5:"International freelancing guide (earn in USD/EUR)", incl6:"Free lifetime updates", incl7:"Instant delivery to your email",
+    guar_title:"7-Day Money-Back Guarantee.", guar_text:"If within 7 days you feel the pack didn't meet your expectations, contact us with your receipt and we'll refund 100%. No questions, no hassle.",
+    hm_title:"Secure Payment via Hotmart", hm_sub:"Powered by Hotmart · 256-bit SSL · Global processing",
+    hm_cards_label:"We accept:",
+    form_fname:"First Name", form_fname_ph:"John", form_lname:"Last Name", form_lname_ph:"Smith",
+    form_email:"Email — Your pack will be sent here", form_email_ph:"john@email.com",
+    form_country:"Country", form_country_ph:"Select your country…", other_country:"Other",
+    pay_btn:"🔒 Complete Purchase — $17 USD",
+    hotmart_notice:"You will be redirected to <strong>Hotmart's secure checkout</strong> to complete your payment. Hotmart processes payments in 190+ countries and accepts all major credit cards. After payment, your pack is delivered instantly to your email.",
+    countries:"countries",
+    order_title:"Redirecting to Checkout…", order_msg:"You're being taken to Hotmart's secure checkout. Complete your payment there and your pack arrives in your email instantly.",
+    order_fallback_pre:"If the redirect didn't open,", order_fallback_link:"click here",
+    faq_label:"Questions & Answers", faq_h2:"Everything you need to know",
+    faq1_q:"Do I need prior experience?", faq1_a:"No experience needed. The pack is designed for complete beginners. Prompts are ready to copy and paste, and every guide explains each step simply and directly.",
+    faq2_q:"Do I need paid ChatGPT?", faq2_a:"The free version of ChatGPT is enough to start. ChatGPT Plus ($20/month) is more powerful, but it's not required to begin and generate results.",
+    faq3_q:"When do I receive the pack?", faq3_a:"Access is instant. Hotmart automatically sends the download link to your email the moment your payment is confirmed.",
+    faq4_q:"What payment methods do you accept?", faq4_a:"All major credit and debit cards: Visa, Mastercard, American Express, and Discover. Hotmart processes payments from 190+ countries securely.",
+    faq5_q:"How does the 7-day guarantee work?", faq5_a:"If within 7 days you feel the pack didn't meet your expectations, contact us with your purchase receipt and we'll refund 100%. No questions, no complications.",
+    final_label:"Last Chance", final_h2:"Will you keep watching others succeed?",
+    final_sub:"AI doesn't wait. Every day without using it strategically, someone else is taking the clients and opportunities that could be yours.",
+    final_cta:"🚀 Yes, I Want the MEGA PACK IA — $17 USD",
+    float_btn:"⚡ Get Access — $17 USD",
+    footer_rights:"All rights reserved worldwide", footer_privacy:"Privacy Policy", footer_terms:"Terms of Use", footer_support:"Support (WhatsApp)", footer_disclaimer:"⚠️ Income figures shown are examples of what's possible, not guarantees. Individual results vary.",
+    access_status:"✅ Purchase Complete", access_h2:"Welcome to the Pack!", access_sub:"Your access is ready. Follow the steps below to download everything and start generating income with AI.",
+    as1_title:"📥 Download the MEGA PACK IA", as1_desc:"Click the button below to download the full pack. Open it in any browser. Save a copy to Google Drive for permanent access.", as1_btn:"⬇️ Download MEGA PACK IA",
+    as2_title:"🤖 Open ChatGPT", as2_desc:"Go to chat.openai.com and create a free account if you don't have one. The free version works perfectly to start generating results.",
+    as3_title:"🚀 Start with Chapter 1", as3_desc:"Read the 12 Business Models in Chapter 1 and choose ONE. Don't try to do everything at once — focus, take action, see results.",
+    flag:"🇺🇸", langName:"English"
+  },
+
+  fr: {
+    tb: "🌍 Disponible dans le monde entier &nbsp;|&nbsp; ⚡ Accès instantané après paiement &nbsp;|&nbsp; 🛡️ Garantie 7 jours",
+    nav_problem:"Problème", nav_reviews:"Avis", nav_price:"Prix", nav_cta:"Obtenir l'accès →",
+    hero_world_pill:"🌍 Disponible dans tous les pays",
+    hero_pill:"🤖 Le système IA #1 de 2025",
+    h1:"Générez des Revenus Réels<br><em>avec l'Intelligence Artificielle</em>",
+    hero_sub:"200+ prompts éprouvés + 12 modèles commerciaux + modèles prêts à l'emploi. Tout ce dont vous avez besoin pour gagner de l'argent avec ChatGPT depuis n'importe quel pays.",
+    flags_label:"Disponible dans :", flags_more:"+185 pays supplémentaires",
+    hero_cta:"🚀 Obtenir le Pack — Seulement 17 $ USD",
+    sec1:"Paiement sécurisé", sec2:"Accès instantané", sec3:"Garantie 7 jours", sec4:"Toutes les cartes",
+    stat1:"Prompts Prêts", stat2:"Modèles d'Affaires", stat3:"Pays Atteints", stat4:"Accès à vie",
+    prob_label:"Le Vrai Problème", prob_h2:"Vous reconnaissez-vous ici ?",
+    prob1:"Vous savez que l'IA est l'avenir mais ne savez pas par où commencer",
+    prob2:"Vous avez essayé ChatGPT mais ne savez pas comment en tirer des revenus",
+    prob3:"Vous voyez d'autres générer des revenus avec l'IA pendant que vous cherchez encore",
+    prob4:"Vous n'avez pas de capital pour démarrer une entreprise traditionnelle",
+    prob5:"Vous voulez la liberté financière mais ne trouvez pas la bonne voie",
+    prob_highlight:"La réalité est que <strong style='color:var(--gold)'>l'IA crée un écart énorme</strong> entre ceux qui savent l'utiliser stratégiquement et ceux qui ne le savent pas. Avec ce pack, vous serez du bon côté.",
+    inc_label:"Ce Qui Est Inclus", inc_h2:"Un système complet, pas seulement des prompts",
+    inc_sub:"Chaque module est conçu pour une action immédiate — pas d'outils supplémentaires, pas de cours, pas d'expérience requise.",
+    m1_title:"200+ Prompts Organisés", m1_desc:"Prompts par catégorie : contenu viral, copywriting, produits numériques, entreprises locales et freelancing mondial. Prêts à copier-coller.", m1_val:"Valeur : 45 $ USD",
+    m2_title:"12 Modèles d'Affaires", m2_desc:"Les 12 entreprises IA les plus rentables de 2025, avec données de revenus réels, niveau de difficulté et guide étape par étape.", m2_val:"Valeur : 55 $ USD",
+    m3_title:"Modèles Prêts à l'Emploi", m3_desc:"Propositions de services, contrats, demandes de témoignages et scripts de vente. Il suffit de copier, personnaliser et envoyer.", m3_val:"Valeur : 30 $ USD",
+    m4_title:"Système en 7 Étapes", m4_desc:"La feuille de route exacte pour obtenir votre premier client payant en 7 jours ou moins — même sans expérience préalable.", m4_val:"Valeur : 35 $ USD",
+    m5_title:"Guide de Tarification Mondial", m5_desc:"Comment fixer, justifier et augmenter vos tarifs pour que les clients disent oui — avec des références pour l'Amérique latine, les États-Unis et l'Europe.", m5_val:"Valeur : 25 $ USD",
+    m6_title:"Guide de Freelancing International", m6_desc:"Comment trouver des clients aux États-Unis, au Royaume-Uni, en Espagne et au Canada qui paient en dollars ou en euros depuis n'importe où dans le monde.", m6_val:"Valeur : 35 $ USD",
+    vs_label:"Valeur totale de tout ce qui est inclus", vs_sub:"Paiement unique · Sans abonnement · Accès à vie", vs_cta:"Tout obtenir pour 17 $ USD →",
+    fw_label:"Est-ce pour moi ?", fw_h2:"Ce pack est parfait pour vous si…",
+    fw_yes_title:"✅ OUI, c'est pour vous si…", fw_no_title:"❌ PAS pour vous si…",
+    fw_yes1:"Vous voulez générer des revenus supplémentaires depuis chez vous", fw_yes2:"Vous êtes entrepreneur ou souhaitez le devenir",
+    fw_yes3:"Vous offrez des services et voulez travailler plus vite", fw_yes4:"Vous êtes curieux de l'IA mais ne savez pas comment la monétiser",
+    fw_yes5:"Vous voulez travailler moins et gagner plus", fw_yes6:"Vous êtes étudiant et souhaitez créer vos propres revenus",
+    fw_no1:"Vous espérez vous enrichir sans travailler", fw_no2:"Vous n'êtes pas prêt à investir du temps pour apprendre",
+    fw_no3:"Vous voulez des résultats sans passer à l'action", fw_no4:"Vous êtes déjà expert avancé en monétisation IA",
+    rev_label:"Résultats Réels · Avis Mondiaux", rev_h2:"Des personnes de 47 pays l'utilisent déjà",
+    t1_q:"J'ai obtenu mon premier client en contenu 5 jours après l'achat. Les prompts sont incroyablement détaillés et fonctionnent vraiment. J'ai récupéré 10x l'investissement la première semaine.",
+    t2_q:"En tant que designer freelance à Barcelone, j'ai ajouté le copywriting avec ces prompts. Je facture maintenant 2x par projet et les clients adorent les résultats.",
+    t3_q:"Acheté depuis Londres pour une activité secondaire. En 6 semaines je gagnais £400/mois en écrivant du contenu LinkedIn assisté par IA. Le ROI est incroyable.",
+    t4_q:"Le guide de freelancing international vaut à lui seul 10x le prix. J'ai trouvé mon premier client américain en 3 semaines qui me paie 800$/mois.",
+    t5_q:"Je l'ai acheté pour développer une activité secondaire. En un mois, j'ai trois clients qui me paient pour gérer leurs réseaux sociaux avec l'IA. Excellent investissement.",
+    t6_q:"En tant que rédacteur freelance, j'ai élargi mon offre avec ces prompts. Mon revenu a doublé en 2 mois. Absolument recommandé.",
+    price_label:"Obtenir l'Accès", price_h2:"Un investissement. Des résultats à vie.",
+    price_badge:"🔥 Prix de Lancement", price_sub:"USD · Paiement unique · Accès instantané · Sans abonnement",
+    incl1:"200+ prompts IA organisés par catégorie", incl2:"12 modèles d'affaires prouvés avec données de revenus",
+    incl3:"Système en 7 étapes pour votre premier client", incl4:"Propositions, contrats et modèles clients",
+    incl5:"Guide de freelancing international (gagnez en USD/EUR)", incl6:"Mises à jour gratuites à vie", incl7:"Livraison instantanée par email",
+    guar_title:"Garantie 7 jours.", guar_text:"Si dans les 7 jours vous sentez que le pack n'a pas répondu à vos attentes, contactez-nous avec votre reçu et nous vous remboursons 100%. Sans questions, sans complications.",
+    hm_title:"Paiement Sécurisé via Hotmart", hm_sub:"Propulsé par Hotmart · SSL 256-bit · Traitement mondial",
+    hm_cards_label:"Nous acceptons :",
+    form_fname:"Prénom", form_fname_ph:"Jean", form_lname:"Nom", form_lname_ph:"Dupont",
+    form_email:"Email — Votre pack vous sera envoyé ici", form_email_ph:"jean@email.com",
+    form_country:"Pays", form_country_ph:"Sélectionnez votre pays…", other_country:"Autre",
+    pay_btn:"🔒 Finaliser l'Achat — 17 $ USD",
+    hotmart_notice:"Vous serez redirigé vers le <strong>checkout sécurisé de Hotmart</strong> pour finaliser votre paiement. Hotmart traite les paiements dans 190+ pays et accepte toutes les principales cartes de crédit. Après le paiement, votre pack est livré instantanément à votre email.",
+    countries:"pays",
+    order_title:"Redirection vers le Checkout…", order_msg:"Vous êtes redirigé vers le checkout sécurisé de Hotmart. Finalisez votre paiement là-bas et votre pack arrive instantanément dans votre email.",
+    order_fallback_pre:"Si la redirection ne s'est pas ouverte,", order_fallback_link:"cliquez ici",
+    faq_label:"Questions et Réponses", faq_h2:"Tout ce que vous devez savoir",
+    faq1_q:"Ai-je besoin d'une expérience préalable ?", faq1_a:"Aucune expérience requise. Le pack est conçu pour les débutants complets. Les prompts sont prêts à copier-coller et chaque guide explique chaque étape simplement.",
+    faq2_q:"Ai-je besoin de ChatGPT payant ?", faq2_a:"La version gratuite de ChatGPT suffit pour commencer. ChatGPT Plus (20$/mois) est plus puissant, mais n'est pas requis pour démarrer et générer des résultats.",
+    faq3_q:"Quand vais-je recevoir le pack ?", faq3_a:"L'accès est instantané. Hotmart envoie automatiquement le lien de téléchargement à votre email dès que votre paiement est confirmé.",
+    faq4_q:"Quels modes de paiement acceptez-vous ?", faq4_a:"Toutes les principales cartes de crédit et de débit : Visa, Mastercard, American Express et Discover. Hotmart traite les paiements de plus de 190 pays de manière sécurisée.",
+    faq5_q:"Comment fonctionne la garantie de 7 jours ?", faq5_a:"Si dans les 7 jours vous sentez que le pack n'a pas répondu à vos attentes, contactez-nous avec votre reçu d'achat et nous vous remboursons 100%. Sans questions ni complications.",
+    final_label:"Dernière Chance", final_h2:"Allez-vous continuer à regarder les autres réussir ?",
+    final_sub:"L'IA n'attend pas. Chaque jour sans l'utiliser stratégiquement, quelqu'un d'autre prend les clients et les opportunités qui pourraient être les vôtres.",
+    final_cta:"🚀 Oui, Je Veux le MEGA PACK IA — 17 $ USD",
+    float_btn:"⚡ Accès — 17 $ USD",
+    footer_rights:"Tous droits réservés dans le monde entier", footer_privacy:"Politique de Confidentialité", footer_terms:"Conditions d'Utilisation", footer_support:"Support (WhatsApp)", footer_disclaimer:"⚠️ Les revenus indiqués sont des exemples de ce qui est possible, pas des garanties. Les résultats varient selon les individus.",
+    access_status:"✅ Achat Complété", access_h2:"Bienvenue dans le Pack !", access_sub:"Votre accès est prêt. Suivez les étapes ci-dessous pour tout télécharger et commencer à générer des revenus avec l'IA.",
+    as1_title:"📥 Télécharger le MEGA PACK IA", as1_desc:"Cliquez sur le bouton ci-dessous pour télécharger le pack complet. Ouvrez-le dans n'importe quel navigateur. Sauvegardez une copie sur Google Drive pour un accès permanent.", as1_btn:"⬇️ Télécharger MEGA PACK IA",
+    as2_title:"🤖 Ouvrir ChatGPT", as2_desc:"Allez sur chat.openai.com et créez un compte gratuit si vous n'en avez pas. La version gratuite fonctionne parfaitement pour commencer.",
+    as3_title:"🚀 Commencez avec le Chapitre 1", as3_desc:"Lisez les 12 Modèles d'Affaires du Chapitre 1 et choisissez-en UN. Ne cherchez pas à tout faire à la fois — concentrez-vous, agissez et voyez les résultats.",
+    flag:"🇫🇷", langName:"Français"
+  },
+
+  pt: {
+    tb: "🌍 Disponível no mundo inteiro &nbsp;|&nbsp; ⚡ Acesso instantâneo após pagamento &nbsp;|&nbsp; 🛡️ Garantia de 7 dias",
+    nav_problem:"Problema", nav_reviews:"Avaliações", nav_price:"Preço", nav_cta:"Obter acesso →",
+    hero_world_pill:"🌍 Disponível em todos os países",
+    hero_pill:"🤖 O sistema de IA #1 de 2025",
+    h1:"Gere Renda Real<br><em>com Inteligência Artificial</em>",
+    hero_sub:"200+ prompts comprovados + 12 modelos de negócio + templates prontos. Tudo que você precisa para ganhar dinheiro com ChatGPT de qualquer país, sem experiência prévia.",
+    flags_label:"Disponível em:", flags_more:"+185 países",
+    hero_cta:"🚀 Obter o Pack — Apenas $17 USD",
+    sec1:"Pagamento seguro", sec2:"Acesso instantâneo", sec3:"Garantia 7 dias", sec4:"Todos os cartões",
+    stat1:"Prompts Prontos", stat2:"Modelos de Negócio", stat3:"Países Alcançados", stat4:"Acesso Vitalício",
+    prob_label:"O Problema Real", prob_h2:"Você se identifica com isso?",
+    prob1:"Você sabe que a IA é o futuro mas não sabe por onde começar",
+    prob2:"Você tentou o ChatGPT mas não sabe como ganhar dinheiro com ele",
+    prob3:"Você vê outros gerando renda com IA enquanto você ainda está buscando",
+    prob4:"Você não tem capital para começar um negócio tradicional",
+    prob5:"Você quer liberdade financeira mas não encontra o caminho certo",
+    prob_highlight:"A realidade é que <strong style='color:var(--gold)'>a IA está criando uma lacuna enorme</strong> entre os que sabem usá-la estrategicamente e os que não sabem. Com este pack, você estará do lado certo.",
+    inc_label:"O Que Está Incluído", inc_h2:"Um sistema completo, não apenas prompts",
+    inc_sub:"Cada módulo é projetado para ação imediata — sem ferramentas extras, sem cursos, sem experiência necessária.",
+    m1_title:"200+ Prompts Organizados", m1_desc:"Prompts por categoria: conteúdo viral, copywriting, produtos digitais, negócios locais e freelancing global. Prontos para copiar e colar.", m1_val:"Valor: $45 USD",
+    m2_title:"12 Modelos de Negócio", m2_desc:"Os 12 negócios com IA mais rentáveis de 2025, com dados de renda reais, nível de dificuldade e guia passo a passo.", m2_val:"Valor: $55 USD",
+    m3_title:"Templates Prontos para Usar", m3_desc:"Propostas de serviço, contratos, pedidos de depoimentos e scripts de vendas. Basta copiar, personalizar e enviar.", m3_val:"Valor: $30 USD",
+    m4_title:"Sistema de 7 Passos", m4_desc:"O roteiro exato para conseguir seu primeiro cliente em 7 dias ou menos — mesmo sem experiência anterior.", m4_val:"Valor: $35 USD",
+    m5_title:"Guia de Preços Global", m5_desc:"Como definir, justificar e aumentar suas tarifas para que os clientes digam sim — com benchmarks para América Latina, EUA e Europa.", m5_val:"Valor: $25 USD",
+    m6_title:"Guia de Freelancing Internacional", m6_desc:"Como conseguir clientes nos EUA, Reino Unido, Espanha e Canadá que pagam em dólares ou euros de qualquer lugar do mundo.", m6_val:"Valor: $35 USD",
+    vs_label:"Valor total de tudo incluído", vs_sub:"Pagamento único · Sem assinaturas · Acesso vitalício", vs_cta:"Obter Tudo por $17 USD →",
+    fw_label:"É Para Mim?", fw_h2:"Este pack é perfeito para você se…",
+    fw_yes_title:"✅ SIM, é para você se…", fw_no_title:"❌ NÃO é para você se…",
+    fw_yes1:"Você quer gerar renda extra de casa", fw_yes2:"Você é empreendedor ou quer se tornar um",
+    fw_yes3:"Você oferece serviços e quer trabalhar mais rápido", fw_yes4:"Você tem curiosidade sobre IA mas não sabe como monetizá-la",
+    fw_yes5:"Você quer trabalhar menos e ganhar mais", fw_yes6:"Você é estudante e quer criar sua própria renda",
+    fw_no1:"Você espera ficar rico sem trabalhar", fw_no2:"Você não está disposto a investir tempo para aprender",
+    fw_no3:"Você quer resultados sem tomar ação", fw_no4:"Você já é um especialista avançado em monetização com IA",
+    rev_label:"Resultados Reais · Avaliações Globais", rev_h2:"Pessoas de 47 países já estão usando isso",
+    t1_q:"Consegui meu primeiro cliente de conteúdo 5 dias após a compra. Os prompts são incrivelmente detalhados e funcionam de verdade. Recuperei 10x o investimento na primeira semana.",
+    t2_q:"Como designer freelance em Barcelona, adicionei copywriting aos meus serviços com esses prompts. Agora cobro o dobro por projeto e os clientes adoram os resultados.",
+    t3_q:"Comprei de Londres para uma renda extra. Em 6 semanas estava ganhando £400/mês escrevendo conteúdo de LinkedIn com IA. O ROI é incrível.",
+    t4_q:"O guia de freelancing internacional sozinho vale 10x o preço. Encontrei meu primeiro cliente americano em 3 semanas que me paga $800/mês por conteúdo.",
+    t5_q:"Comprei para desenvolver um negócio paralelo. Em um mês, tenho três clientes me pagando para gerenciar as redes sociais deles com IA. Excelente investimento.",
+    t6_q:"Como redator freelance, expandi minha oferta com esses prompts. Minha renda dobrou em 2 meses. Absolutamente recomendado.",
+    price_label:"Obter Acesso Agora", price_h2:"Um investimento. Resultados para sempre.",
+    price_badge:"🔥 Preço de Lançamento", price_sub:"USD · Pagamento único · Acesso instantâneo · Sem assinatura",
+    incl1:"200+ prompts de IA organizados por categoria", incl2:"12 modelos de negócio comprovados com dados de renda",
+    incl3:"Sistema de 7 passos para seu primeiro cliente", incl4:"Propostas, contratos e templates para clientes",
+    incl5:"Guia de freelancing internacional (ganhe em USD/EUR)", incl6:"Atualizações gratuitas vitalícias", incl7:"Entrega instantânea para seu email",
+    guar_title:"Garantia de 7 dias.", guar_text:"Se em 7 dias você sentir que o pack não atendeu às suas expectativas, entre em contato com seu recibo e reembolsaremos 100%. Sem perguntas, sem complicações.",
+    hm_title:"Pagamento Seguro via Hotmart", hm_sub:"Desenvolvido por Hotmart · SSL 256-bit · Processamento global",
+    hm_cards_label:"Aceitamos:",
+    form_fname:"Nome", form_fname_ph:"João", form_lname:"Sobrenome", form_lname_ph:"Silva",
+    form_email:"Email — Seu pack será enviado aqui", form_email_ph:"joao@email.com",
+    form_country:"País", form_country_ph:"Selecione seu país…", other_country:"Outro",
+    pay_btn:"🔒 Concluir Compra — $17 USD",
+    hotmart_notice:"Você será redirecionado para o <strong>checkout seguro da Hotmart</strong> para concluir seu pagamento. A Hotmart processa pagamentos em 190+ países e aceita todos os principais cartões de crédito. Após o pagamento, seu pack é entregue instantaneamente ao seu email.",
+    countries:"países",
+    order_title:"Redirecionando para o Checkout…", order_msg:"Você está sendo levado para o checkout seguro da Hotmart. Conclua seu pagamento lá e seu pack chega instantaneamente ao seu email.",
+    order_fallback_pre:"Se o redirecionamento não abriu,", order_fallback_link:"clique aqui",
+    faq_label:"Perguntas e Respostas", faq_h2:"Tudo que você precisa saber",
+    faq1_q:"Preciso de experiência prévia?", faq1_a:"Nenhuma experiência necessária. O pack é projetado para iniciantes completos. Os prompts estão prontos para copiar e colar, e cada guia explica cada passo de forma simples.",
+    faq2_q:"Preciso do ChatGPT pago?", faq2_a:"A versão gratuita do ChatGPT é suficiente para começar. O ChatGPT Plus ($20/mês) é mais poderoso, mas não é necessário para começar a gerar resultados.",
+    faq3_q:"Quando recebo o pack?", faq3_a:"O acesso é instantâneo. A Hotmart envia automaticamente o link de download para seu email no momento em que seu pagamento é confirmado.",
+    faq4_q:"Quais métodos de pagamento são aceitos?", faq4_a:"Todos os principais cartões de crédito e débito: Visa, Mastercard, American Express e Discover. A Hotmart processa pagamentos de mais de 190 países com segurança.",
+    faq5_q:"Como funciona a garantia de 7 dias?", faq5_a:"Se em 7 dias você sentir que o pack não atendeu às suas expectativas, entre em contato com seu recibo de compra e reembolsaremos 100%. Sem perguntas, sem complicações.",
+    final_label:"Última Oportunidade", final_h2:"Você vai continuar vendo outros terem sucesso?",
+    final_sub:"A IA não espera. Cada dia sem usá-la estrategicamente, alguém mais está pegando os clientes e oportunidades que poderiam ser seus.",
+    final_cta:"🚀 Sim, Quero o MEGA PACK IA — $17 USD",
+    float_btn:"⚡ Acesso — $17 USD",
+    footer_rights:"Todos os direitos reservados", footer_privacy:"Política de Privacidade", footer_terms:"Termos de Uso", footer_support:"Suporte (WhatsApp)", footer_disclaimer:"⚠️ Os valores de renda mostrados são exemplos do que é possível, não garantias. Os resultados individuais variam.",
+    access_status:"✅ Compra Concluída", access_h2:"Bem-vindo ao Pack!", access_sub:"Seu acesso está pronto. Siga as etapas abaixo para baixar tudo e começar a gerar renda com IA.",
+    as1_title:"📥 Baixar o MEGA PACK IA", as1_desc:"Clique no botão abaixo para baixar o pack completo. Abra-o em qualquer navegador. Salve uma cópia no Google Drive para acesso permanente.", as1_btn:"⬇️ Baixar MEGA PACK IA",
+    as2_title:"🤖 Abrir o ChatGPT", as2_desc:"Acesse chat.openai.com e crie uma conta gratuita se ainda não tiver. A versão gratuita funciona perfeitamente para começar.",
+    as3_title:"🚀 Comece pelo Capítulo 1", as3_desc:"Leia os 12 Modelos de Negócio do Capítulo 1 e escolha UM. Não tente fazer tudo de uma vez — foque, aja e veja os resultados.",
+    flag:"🇧🇷", langName:"Português"
+  },
+
+  de: {
+    tb: "🌍 Weltweit verfügbar &nbsp;|&nbsp; ⚡ Sofortiger Zugang nach Zahlung &nbsp;|&nbsp; 🛡️ 7-Tage-Geld-zurück-Garantie",
+    nav_problem:"Problem", nav_reviews:"Bewertungen", nav_price:"Preis", nav_cta:"Zugang erhalten →",
+    hero_world_pill:"🌍 In jedem Land verfügbar",
+    hero_pill:"🤖 Das KI-System #1 von 2025",
+    h1:"Echtes Einkommen generieren<br><em>mit Künstlicher Intelligenz</em>",
+    hero_sub:"200+ bewährte Prompts + 12 Geschäftsmodelle + fertige Vorlagen. Alles, was Sie brauchen, um mit ChatGPT aus jedem Land Geld zu verdienen.",
+    flags_label:"Verfügbar in:", flags_more:"+185 weitere Länder",
+    hero_cta:"🚀 Pack holen — Nur 17 $ USD",
+    sec1:"Sichere Zahlung", sec2:"Sofortiger Zugang", sec3:"7-Tage-Garantie", sec4:"Alle Karten",
+    stat1:"Fertige Prompts", stat2:"Geschäftsmodelle", stat3:"Erreichte Länder", stat4:"Lebenslanger Zugang",
+    prob_label:"Das eigentliche Problem", prob_h2:"Erkennen Sie sich hier wieder?",
+    prob1:"Sie wissen, dass KI die Zukunft ist, wissen aber nicht, wo Sie anfangen sollen",
+    prob2:"Sie haben ChatGPT ausprobiert, wissen aber nicht, wie Sie damit Geld verdienen können",
+    prob3:"Sie sehen andere, die mit KI Einkommen erzielen, während Sie noch suchen",
+    prob4:"Sie haben kein Kapital, um ein traditionelles Unternehmen zu gründen",
+    prob5:"Sie wollen finanzielle Freiheit, finden aber nicht den richtigen Weg",
+    prob_highlight:"Die Realität ist, dass <strong style='color:var(--gold)'>KI eine riesige Kluft schafft</strong> zwischen denen, die sie strategisch nutzen können, und denen, die es nicht können. Mit diesem Pack sind Sie auf der richtigen Seite.",
+    inc_label:"Was enthalten ist", inc_h2:"Ein komplettes System, nicht nur Prompts",
+    inc_sub:"Jedes Modul ist für sofortiges Handeln ausgelegt — keine zusätzlichen Tools, keine Kurse, keine Erfahrung erforderlich.",
+    m1_title:"200+ organisierte Prompts", m1_desc:"Prompts nach Kategorie: viraler Content, Copywriting, digitale Produkte, lokale Unternehmen und globales Freelancing. Bereit zum Kopieren und Einfügen.", m1_val:"Wert: 45 $ USD",
+    m2_title:"12 Geschäftsmodelle", m2_desc:"Die 12 profitabelsten KI-Unternehmen 2025, mit echten Einkommensdaten, Schwierigkeitsgrad und Schritt-für-Schritt-Anleitung.", m2_val:"Wert: 55 $ USD",
+    m3_title:"Fertige Vorlagen", m3_desc:"Serviceangebote, Verträge, Testimonial-Anfragen und Verkaufsskripte. Einfach kopieren, anpassen und senden.", m3_val:"Wert: 30 $ USD",
+    m4_title:"7-Schritte-Erstkunden-System", m4_desc:"Die genaue Roadmap, um Ihren ersten zahlenden Kunden in 7 Tagen oder weniger zu gewinnen — auch ohne Vorkenntnisse.", m4_val:"Wert: 35 $ USD",
+    m5_title:"Globaler Preisleitfaden", m5_desc:"Wie Sie Ihre Tarife festlegen, rechtfertigen und erhöhen, damit Kunden Ja sagen — mit Benchmarks für Lateinamerika, USA und Europa.", m5_val:"Wert: 25 $ USD",
+    m6_title:"Internationaler Freelancing-Leitfaden", m6_desc:"Wie Sie Kunden in den USA, Großbritannien, Spanien und Kanada finden, die in Dollar oder Euro zahlen — von überall auf der Welt.", m6_val:"Wert: 35 $ USD",
+    vs_label:"Gesamtwert aller enthaltenen Inhalte", vs_sub:"Einmalige Zahlung · Keine Abonnements · Lebenslanger Zugang", vs_cta:"Alles für 17 $ USD erhalten →",
+    fw_label:"Ist das für mich?", fw_h2:"Dieses Pack ist perfekt für Sie, wenn…",
+    fw_yes_title:"✅ JA, es ist für Sie, wenn…", fw_no_title:"❌ NICHT für Sie, wenn…",
+    fw_yes1:"Sie zusätzliches Einkommen von zu Hause generieren möchten", fw_yes2:"Sie Unternehmer sind oder werden möchten",
+    fw_yes3:"Sie Dienstleistungen anbieten und schneller arbeiten möchten", fw_yes4:"Sie neugierig auf KI sind, aber nicht wissen, wie Sie sie monetarisieren können",
+    fw_yes5:"Sie weniger arbeiten und mehr verdienen möchten", fw_yes6:"Sie Student sind und eigenes Einkommen schaffen möchten",
+    fw_no1:"Sie erwarten, ohne Arbeit reich zu werden", fw_no2:"Sie nicht bereit sind, Zeit zum Lernen zu investieren",
+    fw_no3:"Sie Ergebnisse ohne Handeln möchten", fw_no4:"Sie bereits fortgeschrittener KI-Monetarisierungsexperte sind",
+    rev_label:"Echte Ergebnisse · Weltweite Bewertungen", rev_h2:"Menschen aus 47 Ländern nutzen es bereits",
+    t1_q:"Ich habe 5 Tage nach dem Kauf meinen ersten Content-Kunden gewonnen. Die Prompts sind unglaublich detailliert und funktionieren wirklich. Investition 10-fach in der ersten Woche zurückgeholt.",
+    t2_q:"Als freiberuflicher Designer in Barcelona habe ich Copywriting mit diesen Prompts hinzugefügt. Ich berechne jetzt das Doppelte pro Projekt und Kunden lieben die Ergebnisse.",
+    t3_q:"Von London aus für einen Nebenjob gekauft. Innerhalb von 6 Wochen verdiente ich £400/Monat mit KI-gestütztem LinkedIn-Content. Der ROI ist unglaublich.",
+    t4_q:"Der internationale Freelancing-Leitfaden allein ist 10x den Preis wert. Ich fand meinen ersten US-Kunden in 3 Wochen, der mir 800$/Monat zahlt.",
+    t5_q:"Ich habe es gekauft, um ein Nebenprojekt zu entwickeln. In einem Monat habe ich drei Kunden, die mir zahlen, um ihre sozialen Medien mit KI zu verwalten.",
+    t6_q:"Als freiberuflicher Texter habe ich mein Angebot mit diesen Prompts erweitert. Mein Einkommen hat sich in 2 Monaten verdoppelt. Absolut empfehlenswert.",
+    price_label:"Zugang erhalten", price_h2:"Eine Investition. Lebenslange Ergebnisse.",
+    price_badge:"🔥 Einführungspreis", price_sub:"USD · Einmalige Zahlung · Sofortiger Zugang · Kein Abonnement",
+    incl1:"200+ KI-Prompts nach Kategorie organisiert", incl2:"12 bewährte Geschäftsmodelle mit Einkommensdaten",
+    incl3:"7-Schritte-System für Ihren ersten Kunden", incl4:"Angebote, Verträge und Vorlagen",
+    incl5:"Internationaler Freelancing-Leitfaden (verdienen in USD/EUR)", incl6:"Kostenlose lebenslange Updates", incl7:"Sofortige Lieferung an Ihre E-Mail",
+    guar_title:"7-Tage-Geld-zurück-Garantie.", guar_text:"Wenn Sie innerhalb von 7 Tagen das Gefühl haben, dass das Pack Ihre Erwartungen nicht erfüllt hat, kontaktieren Sie uns mit Ihrer Quittung und wir erstatten 100%. Keine Fragen, keine Komplikationen.",
+    hm_title:"Sichere Zahlung über Hotmart", hm_sub:"Unterstützt von Hotmart · SSL 256-bit · Globale Verarbeitung",
+    hm_cards_label:"Wir akzeptieren:",
+    form_fname:"Vorname", form_fname_ph:"Max", form_lname:"Nachname", form_lname_ph:"Müller",
+    form_email:"E-Mail — Ihr Pack wird hierher gesendet", form_email_ph:"max@email.de",
+    form_country:"Land", form_country_ph:"Wählen Sie Ihr Land…", other_country:"Anderes",
+    pay_btn:"🔒 Kauf abschließen — 17 $ USD",
+    hotmart_notice:"Sie werden zum <strong>sicheren Checkout von Hotmart</strong> weitergeleitet, um Ihre Zahlung abzuschließen. Hotmart verarbeitet Zahlungen in 190+ Ländern und akzeptiert alle gängigen Kreditkarten. Nach der Zahlung wird Ihr Pack sofort an Ihre E-Mail geliefert.",
+    countries:"Länder",
+    order_title:"Weiterleitung zum Checkout…", order_msg:"Sie werden zum sicheren Checkout von Hotmart weitergeleitet. Schließen Sie dort Ihre Zahlung ab und Ihr Pack kommt sofort in Ihrer E-Mail an.",
+    order_fallback_pre:"Wenn die Weiterleitung nicht geöffnet wurde,", order_fallback_link:"klicken Sie hier",
+    faq_label:"Fragen und Antworten", faq_h2:"Alles, was Sie wissen müssen",
+    faq1_q:"Benötige ich Vorkenntnisse?", faq1_a:"Keine Erfahrung erforderlich. Das Pack ist für absolute Anfänger konzipiert. Prompts sind bereit zum Kopieren und Einfügen, und jeder Leitfaden erklärt jeden Schritt einfach.",
+    faq2_q:"Benötige ich bezahltes ChatGPT?", faq2_a:"Die kostenlose Version von ChatGPT reicht für den Anfang. ChatGPT Plus (20$/Monat) ist leistungsfähiger, aber nicht erforderlich, um anzufangen und Ergebnisse zu erzielen.",
+    faq3_q:"Wann erhalte ich das Pack?", faq3_a:"Der Zugang ist sofort. Hotmart sendet automatisch den Download-Link an Ihre E-Mail, sobald Ihre Zahlung bestätigt ist.",
+    faq4_q:"Welche Zahlungsmethoden werden akzeptiert?", faq4_a:"Alle gängigen Kredit- und Debitkarten: Visa, Mastercard, American Express und Discover. Hotmart verarbeitet Zahlungen aus mehr als 190 Ländern sicher.",
+    faq5_q:"Wie funktioniert die 7-Tage-Garantie?", faq5_a:"Wenn Sie innerhalb von 7 Tagen das Gefühl haben, dass das Pack Ihre Erwartungen nicht erfüllt hat, kontaktieren Sie uns mit Ihrer Kaufquittung und wir erstatten 100%. Keine Fragen, keine Komplikationen.",
+    final_label:"Letzte Chance", final_h2:"Werden Sie weiter zusehen, wie andere Erfolg haben?",
+    final_sub:"KI wartet nicht. Jeder Tag ohne strategischen Einsatz nimmt jemand anderes die Kunden und Chancen, die Ihre sein könnten.",
+    final_cta:"🚀 Ja, ich will das MEGA PACK IA — 17 $ USD",
+    float_btn:"⚡ Zugang — 17 $ USD",
+    footer_rights:"Alle Rechte weltweit vorbehalten", footer_privacy:"Datenschutzrichtlinie", footer_terms:"Nutzungsbedingungen", footer_support:"Support (WhatsApp)", footer_disclaimer:"⚠️ Die gezeigten Einkommenszahlen sind Beispiele des Möglichen, keine Garantien. Individuelle Ergebnisse variieren.",
+    access_status:"✅ Kauf abgeschlossen", access_h2:"Willkommen im Pack!", access_sub:"Ihr Zugang ist bereit. Folgen Sie den folgenden Schritten, um alles herunterzuladen und mit KI Einkommen zu generieren.",
+    as1_title:"📥 MEGA PACK IA herunterladen", as1_desc:"Klicken Sie unten auf die Schaltfläche, um das vollständige Pack herunterzuladen. Öffnen Sie es in einem beliebigen Browser. Speichern Sie eine Kopie in Google Drive für dauerhaften Zugang.", as1_btn:"⬇️ MEGA PACK IA herunterladen",
+    as2_title:"🤖 ChatGPT öffnen", as2_desc:"Gehen Sie zu chat.openai.com und erstellen Sie ein kostenloses Konto, wenn Sie noch keines haben. Die kostenlose Version funktioniert perfekt, um loszulegen.",
+    as3_title:"🚀 Mit Kapitel 1 beginnen", as3_desc:"Lesen Sie die 12 Geschäftsmodelle in Kapitel 1 und wählen Sie EINES. Versuchen Sie nicht, alles auf einmal zu tun — konzentrieren Sie sich, handeln Sie und sehen Sie die Ergebnisse.",
+    flag:"🇩🇪", langName:"Deutsch"
+  },
+
+  it: {
+    tb: "🌍 Disponibile in tutto il mondo &nbsp;|&nbsp; ⚡ Accesso istantaneo dopo il pagamento &nbsp;|&nbsp; 🛡️ Garanzia 7 giorni",
+    nav_problem:"Problema", nav_reviews:"Recensioni", nav_price:"Prezzo", nav_cta:"Ottieni l'accesso →",
+    hero_world_pill:"🌍 Disponibile in tutti i paesi",
+    hero_pill:"🤖 Il sistema IA #1 del 2025",
+    h1:"Genera Reddito Reale<br><em>con l'Intelligenza Artificiale</em>",
+    hero_sub:"200+ prompt comprovati + 12 modelli di business + template pronti. Tutto ciò di cui hai bisogno per guadagnare con ChatGPT da qualsiasi paese, senza esperienza.",
+    flags_label:"Disponibile in:", flags_more:"+185 altri paesi",
+    hero_cta:"🚀 Ottieni il Pack — Solo $17 USD",
+    sec1:"Pagamento sicuro", sec2:"Accesso istantaneo", sec3:"Garanzia 7 giorni", sec4:"Tutte le carte",
+    stat1:"Prompt Pronti", stat2:"Modelli di Business", stat3:"Paesi Raggiunti", stat4:"Accesso a vita",
+    prob_label:"Il Problema Reale", prob_h2:"Ti riconosci in questo?",
+    prob1:"Sai che l'IA è il futuro ma non sai da dove cominciare",
+    prob2:"Hai provato ChatGPT ma non sai come guadagnarci",
+    prob3:"Vedi altri generare reddito con l'IA mentre tu stai ancora cercando",
+    prob4:"Non hai capitale per avviare un'impresa tradizionale",
+    prob5:"Vuoi libertà finanziaria ma non trovi la strada giusta",
+    prob_highlight:"La realtà è che <strong style='color:var(--gold)'>l'IA sta creando un enorme divario</strong> tra chi sa usarla strategicamente e chi non lo sa. Con questo pack, sarai dalla parte giusta.",
+    inc_label:"Cosa è Incluso", inc_h2:"Un sistema completo, non solo prompt",
+    inc_sub:"Ogni modulo è progettato per un'azione immediata — nessuno strumento extra, nessun corso, nessuna esperienza richiesta.",
+    m1_title:"200+ Prompt Organizzati", m1_desc:"Prompt per categoria: contenuto virale, copywriting, prodotti digitali, imprese locali e freelancing globale. Pronti da copiare e incollare.", m1_val:"Valore: $45 USD",
+    m2_title:"12 Modelli di Business", m2_desc:"I 12 business con IA più redditizi del 2025, con dati di reddito reali, livello di difficoltà e guida passo dopo passo.", m2_val:"Valore: $55 USD",
+    m3_title:"Template Pronti all'uso", m3_desc:"Proposte di servizio, contratti, richieste di testimonianze e script di vendita. Basta copiare, personalizzare e inviare.", m3_val:"Valore: $30 USD",
+    m4_title:"Sistema in 7 Passi", m4_desc:"La tabella di marcia esatta per ottenere il tuo primo cliente pagante in 7 giorni o meno — anche senza esperienza precedente.", m4_val:"Valore: $35 USD",
+    m5_title:"Guida ai Prezzi Globale", m5_desc:"Come impostare, giustificare e aumentare le tue tariffe in modo che i clienti dicano sì — con benchmark per America Latina, USA ed Europa.", m5_val:"Valore: $25 USD",
+    m6_title:"Guida al Freelancing Internazionale", m6_desc:"Come trovare clienti negli USA, UK, Spagna e Canada che pagano in dollari o euro da qualsiasi parte del mondo.", m6_val:"Valore: $35 USD",
+    vs_label:"Valore totale di tutto il contenuto", vs_sub:"Pagamento unico · Senza abbonamenti · Accesso a vita", vs_cta:"Ottieni Tutto per $17 USD →",
+    fw_label:"È Per Me?", fw_h2:"Questo pack è perfetto per te se…",
+    fw_yes_title:"✅ SÌ, è per te se…", fw_no_title:"❌ NON è per te se…",
+    fw_yes1:"Vuoi generare reddito extra da casa", fw_yes2:"Sei un imprenditore o vuoi diventarlo",
+    fw_yes3:"Offri servizi e vuoi lavorare più velocemente", fw_yes4:"Sei curioso dell'IA ma non sai come monetizzarla",
+    fw_yes5:"Vuoi lavorare meno e guadagnare di più", fw_yes6:"Sei uno studente che vuole creare il proprio reddito",
+    fw_no1:"Ti aspetti di arricchirti senza lavorare", fw_no2:"Non sei disposto a investire tempo per imparare",
+    fw_no3:"Vuoi risultati senza agire", fw_no4:"Sei già un esperto avanzato di monetizzazione IA",
+    rev_label:"Risultati Reali · Recensioni Globali", rev_h2:"Persone di 47 paesi lo stanno già usando",
+    t1_q:"Ho ottenuto il mio primo cliente di contenuti 5 giorni dopo l'acquisto. I prompt sono incredibilmente dettagliati e funzionano davvero. Ho recuperato 10 volte l'investimento nella prima settimana.",
+    t2_q:"Come designer freelance a Barcellona, ho aggiunto il copywriting ai miei servizi con questi prompt. Ora faccio pagare il doppio per progetto e i clienti adorano i risultati.",
+    t3_q:"Acquistato da Londra per un'entrata extra. In 6 settimane guadagnavo £400/mese scrivendo contenuti LinkedIn con l'IA. Il ROI è incredibile.",
+    t4_q:"La guida al freelancing internazionale da sola vale 10 volte il prezzo. Ho trovato il mio primo cliente americano in 3 settimane che mi paga $800/mese.",
+    t5_q:"L'ho acquistato per sviluppare un'attività secondaria. In un mese ho tre clienti che mi pagano per gestire i loro social con l'IA. Ottimo investimento.",
+    t6_q:"Come copywriter freelance ho ampliato la mia offerta con questi prompt. Il mio reddito è raddoppiato in 2 mesi. Assolutamente consigliato.",
+    price_label:"Ottieni l'Accesso", price_h2:"Un investimento. Risultati per sempre.",
+    price_badge:"🔥 Prezzo di Lancio", price_sub:"USD · Pagamento unico · Accesso istantaneo · Senza abbonamento",
+    incl1:"200+ prompt IA organizzati per categoria", incl2:"12 modelli di business comprovati con dati di reddito",
+    incl3:"Sistema in 7 passi per il tuo primo cliente", incl4:"Proposte, contratti e template per clienti",
+    incl5:"Guida al freelancing internazionale (guadagna in USD/EUR)", incl6:"Aggiornamenti gratuiti a vita", incl7:"Consegna istantanea alla tua email",
+    guar_title:"Garanzia di 7 giorni.", guar_text:"Se entro 7 giorni ritieni che il pack non abbia soddisfatto le tue aspettative, contattaci con la tua ricevuta e ti rimborseremo il 100%. Nessuna domanda, nessuna complicazione.",
+    hm_title:"Pagamento Sicuro tramite Hotmart", hm_sub:"Powered by Hotmart · SSL 256-bit · Elaborazione globale",
+    hm_cards_label:"Accettiamo:",
+    form_fname:"Nome", form_fname_ph:"Mario", form_lname:"Cognome", form_lname_ph:"Rossi",
+    form_email:"Email — Il tuo pack sarà inviato qui", form_email_ph:"mario@email.it",
+    form_country:"Paese", form_country_ph:"Seleziona il tuo paese…", other_country:"Altro",
+    pay_btn:"🔒 Completa l'Acquisto — $17 USD",
+    hotmart_notice:"Sarai reindirizzato al <strong>checkout sicuro di Hotmart</strong> per completare il pagamento. Hotmart elabora pagamenti in 190+ paesi e accetta tutte le principali carte di credito. Dopo il pagamento, il tuo pack viene consegnato istantaneamente alla tua email.",
+    countries:"paesi",
+    order_title:"Reindirizzamento al Checkout…", order_msg:"Stai per essere portato al checkout sicuro di Hotmart. Completa il pagamento lì e il tuo pack arriva istantaneamente nella tua email.",
+    order_fallback_pre:"Se il reindirizzamento non si è aperto,", order_fallback_link:"clicca qui",
+    faq_label:"Domande e Risposte", faq_h2:"Tutto quello che devi sapere",
+    faq1_q:"Ho bisogno di esperienza precedente?", faq1_a:"Nessuna esperienza richiesta. Il pack è progettato per principianti assoluti. I prompt sono pronti da copiare e incollare, e ogni guida spiega ogni passo in modo semplice.",
+    faq2_q:"Ho bisogno di ChatGPT a pagamento?", faq2_a:"La versione gratuita di ChatGPT è sufficiente per iniziare. ChatGPT Plus ($20/mese) è più potente, ma non è necessario per iniziare a generare risultati.",
+    faq3_q:"Quando ricevo il pack?", faq3_a:"L'accesso è istantaneo. Hotmart invia automaticamente il link di download alla tua email nel momento in cui il pagamento è confermato.",
+    faq4_q:"Quali metodi di pagamento accettate?", faq4_a:"Tutte le principali carte di credito e debito: Visa, Mastercard, American Express e Discover. Hotmart elabora pagamenti da più di 190 paesi in modo sicuro.",
+    faq5_q:"Come funziona la garanzia di 7 giorni?", faq5_a:"Se entro 7 giorni ritieni che il pack non abbia soddisfatto le tue aspettative, contattaci con la tua ricevuta d'acquisto e ti rimborseremo il 100%. Nessuna domanda, nessuna complicazione.",
+    final_label:"Ultima Opportunità", final_h2:"Continuerai a guardare gli altri avere successo?",
+    final_sub:"L'IA non aspetta. Ogni giorno senza usarla strategicamente, qualcun altro sta prendendo i clienti e le opportunità che potrebbero essere tue.",
+    final_cta:"🚀 Sì, Voglio il MEGA PACK IA — $17 USD",
+    float_btn:"⚡ Accesso — $17 USD",
+    footer_rights:"Tutti i diritti riservati nel mondo", footer_privacy:"Informativa sulla Privacy", footer_terms:"Termini di Utilizzo", footer_support:"Supporto (WhatsApp)", footer_disclaimer:"⚠️ I dati di reddito mostrati sono esempi di ciò che è possibile, non garanzie. I risultati individuali variano.",
+    access_status:"✅ Acquisto Completato", access_h2:"Benvenuto nel Pack!", access_sub:"Il tuo accesso è pronto. Segui i passaggi seguenti per scaricare tutto e iniziare a generare reddito con l'IA.",
+    as1_title:"📥 Scarica il MEGA PACK IA", as1_desc:"Clicca il pulsante per scaricare il pack completo. Aprilo in qualsiasi browser. Salva una copia su Google Drive per accesso permanente.", as1_btn:"⬇️ Scarica MEGA PACK IA",
+    as2_title:"🤖 Apri ChatGPT", as2_desc:"Vai su chat.openai.com e crea un account gratuito se non ne hai uno. La versione gratuita funziona perfettamente per iniziare.",
+    as3_title:"🚀 Inizia con il Capitolo 1", as3_desc:"Leggi i 12 Modelli di Business del Capitolo 1 e scegline UNO. Non cercare di fare tutto in una volta — concentrati, agisci e vedi i risultati.",
+    flag:"🇮🇹", langName:"Italiano"
+  }
+};
+
+// ═══════════════════════════════════════════════════════════
+//  LANGUAGE ENGINE
+// ═══════════════════════════════════════════════════════════
+let currentLang = 'es';
+
+// Map browser language codes → our languages
+function detectLang() {
+  const saved = localStorage.getItem('mpiaLang');
+  if (saved && T[saved]) return saved;
+
+  const nav = (navigator.languages && navigator.languages[0]) || navigator.language || 'es';
+  const code = nav.toLowerCase().split('-')[0];
+
+  // Map language codes
+  const map = {
+    es:'es', ca:'es', gl:'es', eu:'es',   // Spanish + co-official Spain
+    en:'en', cy:'en',                        // English + Welsh
+    fr:'fr', oc:'fr',                        // French
+    pt:'pt', br:'pt',                        // Portuguese
+    de:'de', lb:'de', nl:'de',              // German + nearby
+    it:'it'                                  // Italian
+  };
+  return map[code] || 'en'; // default English for unknown
+}
+
+function applyLang(lang) {
+  if (!T[lang]) lang = 'en';
+  currentLang = lang;
+  localStorage.setItem('mpiaLang', lang);
+
+  const t = T[lang];
+  document.documentElement.lang = lang;
+  document.title = `MEGA PACK IA 2025 — ${t.h1.replace(/<[^>]+>/g,'')}`;
+
+  // Update all data-t elements
+  document.querySelectorAll('[data-t]').forEach(el => {
+    const key = el.getAttribute('data-t');
+    if (t[key] !== undefined) {
+      if (el.tagName === 'INPUT' || el.tagName === 'OPTION') {
+        el.placeholder = t[key];
+        el.textContent = t[key];
+      } else {
+        el.innerHTML = t[key];
+      }
+    }
+  });
+
+  // Placeholders from data-ph
+  document.querySelectorAll('[data-ph]').forEach(el => {
+    const key = el.getAttribute('data-ph');
+    if (t[key]) el.placeholder = t[key];
+  });
+
+  // Topbar
+  document.getElementById('tb').innerHTML = t.tb;
+
+  // Lang selector display
+  document.getElementById('currentLangFlag').textContent = t.flag;
+  document.getElementById('currentLangName').textContent = t.langName;
+
+  // Mark selected in dropdown
+  document.querySelectorAll('.lang-option').forEach(opt => {
+    opt.classList.toggle('selected', opt.textContent.trim().includes(t.flag));
+  });
+}
+
+function setLang(lang) {
+  applyLang(lang);
+  document.getElementById('langSelector').classList.remove('open');
+}
+
+function toggleLangMenu() {
+  document.getElementById('langSelector').classList.toggle('open');
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', e => {
+  if (!e.target.closest('#langSelector')) {
+    document.getElementById('langSelector').classList.remove('open');
+  }
+});
+
+// ═══════════════════════════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════════════════════════
+window.addEventListener('DOMContentLoaded', () => {
+  const lang = detectLang();
+  applyLang(lang);
+
+  // Hide loading, show page
+  setTimeout(() => {
+    document.getElementById('lang-loading').classList.add('hidden');
+    document.getElementById('landing-page').style.opacity = '1';
+  }, 900);
+});
+
+// ═══════════════════════════════════════════════════════════
+//  UI HELPERS
+// ═══════════════════════════════════════════════════════════
+window.addEventListener('scroll', () => {
+  document.getElementById('floatBtn').style.display = window.scrollY > 600 ? 'block' : 'none';
+});
+
+function irA(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior:'smooth', block:'start' });
+}
+
+// ═══════════════════════════════════════════════════════════
+//  CHECKOUT
+// ═══════════════════════════════════════════════════════════
+function handleCheckout() {
+  const t  = T[currentLang];
+  const name    = document.getElementById('f-name').value.trim();
+  const last    = document.getElementById('f-last').value.trim();
+  const email   = document.getElementById('f-email').value.trim();
+  const country = document.getElementById('f-country').value.trim();
+  const errBox  = document.getElementById('form-error');
+
+  errBox.style.display = 'none';
+
+  // Validation messages per language
+  const err = {
+    es:['Por favor ingresa tu nombre completo.','Por favor ingresa un email válido.','Por favor selecciona tu país.'],
+    en:['Please enter your full name.','Please enter a valid email address.','Please select your country.'],
+    fr:['Veuillez saisir votre nom complet.','Veuillez saisir une adresse email valide.','Veuillez sélectionner votre pays.'],
+    pt:['Por favor insira seu nome completo.','Por favor insira um email válido.','Por favor selecione seu país.'],
+    de:['Bitte geben Sie Ihren vollständigen Namen ein.','Bitte geben Sie eine gültige E-Mail-Adresse ein.','Bitte wählen Sie Ihr Land.'],
+    it:['Per favore inserisci il tuo nome completo.','Per favore inserisci un indirizzo email valido.','Per favore seleziona il tuo paese.']
+  }[currentLang] || ['Please enter your full name.','Please enter a valid email.','Please select a country.'];
+
+  if (!name || !last) { showError(err[0]); return; }
+  if (!email || !email.includes('@')) { showError(err[1]); return; }
+  if (!country) { showError(err[2]); return; }
+
+  const btn = document.getElementById('pay-btn');
+  btn.disabled = true;
+  document.getElementById('btn-text').style.display = 'none';
+  document.getElementById('btn-spinner').style.display = 'inline-block';
+
+  // ── HOTMART LINK — replace with your actual Hotmart checkout URL ──
+  const HOTMART_URL = 'https://pay.hotmart.com/Y104620749I?off=92xnvs4h';
+  const url = `${HOTMART_URL}?email=${encodeURIComponent(email)}&name=${encodeURIComponent(name+' '+last)}&locale=${currentLang}`;
+
+  setTimeout(() => {
+    window.open(url, '_blank');
+    document.getElementById('purchase-form').style.display = 'none';
+    document.getElementById('order-confirm').style.display = 'block';
+    document.getElementById('manual-link').href = url;
+  }, 1200);
+}
+
+function showError(msg) {
+  const e = document.getElementById('form-error');
+  e.textContent = msg;
+  e.style.display = 'block';
+  const btn = document.getElementById('pay-btn');
+  btn.disabled = false;
+  document.getElementById('btn-text').style.display = 'inline';
+  document.getElementById('btn-spinner').style.display = 'none';
+}
+</script>
+</body>
+</html>
